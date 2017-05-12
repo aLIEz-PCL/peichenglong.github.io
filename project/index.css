@@ -35,15 +35,19 @@ html,body{
 	width: 31%;
 	margin: 0 auto;
 }
+.sybottom{
+	width: 100%;
+	height: 38%;
+}
 .sybottom #img1{
 	display: block;
 	width: 47%;
-	height: 7%;
+	height: 19%;
 	margin: 1% auto;
 }
 .sybottom #img2{
 	display: block;
 	width: 25%;
-	height: 12%;
+	height: 40%;
 	margin: 0 auto;
 }
