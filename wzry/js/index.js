@@ -10,11 +10,11 @@ window.onload = function(){
 			w.style.height = '100%';
 	    }else{  
 	        //这里是竖屏下需要执行的事件
-	        w.style.backgroundColor= 'black';
-			w.style.margin= '0';
-			w.style.padding= '20% 0';
-			w.style.width='100%';
-			w.style.height = '60%';
+//	        w.style.backgroundColor= 'black';
+//			w.style.margin= '0';
+//			w.style.padding= '20% 0';
+//			w.style.width='100%';
+//			w.style.height = '60%';
 	    }  
 	}    
 	orientInit();
