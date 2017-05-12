@@ -23,7 +23,13 @@
 	</body>
 	<script>
 		window.onload = function(){
-			document.querySelector("img").style.display = 'block'
+			document.onreadystatechange = function () {
+	            if (document.readyState == "complete") {
+	                document.body.style.display = "block";
+	            } else {
+	                document.body.style.display = "none";
+	            };
+	        };
 		}
 	</script>
 </html>
