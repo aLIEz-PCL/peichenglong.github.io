@@ -24,6 +24,17 @@
 				<img id="img2" src="img/封面/11_13.png" alt="" />
 			</div>
 		</div>
+		<div class="vs">
+			<div class="vscenter">
+				<div id="left"></div>
+				<div id="center">
+					<img src="img/2/22_03.png"/>
+				</div>
+				<div id="right">
+					<img src="img/2/22_01_06.png"/>
+				</div>
+			</div>
+		</div>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script>
@@ -54,10 +65,16 @@
 		
 		var begin = $(".sybottom #img2")[0]
 		begin.addEventListener("touchstart",function(){
-			  
-			$(".shouye").css("display","none")
+			$(".sybottom #img2").css("transform","translateY(1px)")
+			.css("filter",'drop-shadow(0px -1px 2px gold)')
 		})
-			
+		begin.addEventListener("touchend",function(){
+			$(".sybottom #img2").css("transform","translateY(-1px)")
+			.css("filter",'drop-shadow(0px 0px 0px gold)')
+			setTimeout(function(){
+				$('.shouye').css("display","none")
+			})
+		})
 			
 			
 			
