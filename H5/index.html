@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="裴成龙"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title>融信情，燃上海</title>
+		<link rel="stylesheet" href="swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="animate.min.css"/>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				/*box-sizing: border-box;*/
+			}
+			main{
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+			}
+			main img{
+				position: fixed;
+				left: 87%;
+				top: 3%;
+				z-index: 100;
+			}
+			#page1{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/0/1-01.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				z-index: 29;
+			}
+			#page1 img{
+				width: 50%;
+				height: 10%;
+				position: absolute;
+				top: 30%;
+				left: 25%;
+			}
+			/*----------------------------------*/
+			#page2{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/1/1-03.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 28;
+			}
+			#ttop{
+				width: 100%;
+				height: 20%;
+				padding-top: 10%;
+			}
+			#ttd1{
+				width: 15%;
+				height: 30%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#ttd2{
+				width: 15%;
+				height: 30%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#ttd3{
+				width: 15%;
+				height: 30%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#tcenter{
+				width: 100%;
+				height: 33%;
+				position: relative;
+			}
+			#tci1{
+				position: absolute;
+				height: 100%;
+				left: 32%;
+				top:10%;
+				display: none;
+			}
+			#tci2{
+				position: absolute;
+				height: 75%;
+				left: 51%;
+				top: 10%;
+				display: none;
+			}
+			#tci3{
+				position: absolute;
+				height: 100%;
+				left: 22%;
+				top:10%;
+				display: none;
+			}
+			#tci4{
+				position: absolute;
+				height: 75%;
+				left: 40%;
+				top: 10%;
+				display: none;
+			}
+			#tci5{
+				position: absolute;
+				height: 90%;
+				left: 62%;
+				top: 10%;
+				display: none;
+			}
+			#tci6{
+				position: absolute;
+				height: 30%;
+				left: 67%;
+				top: 10%;
+				display: none;
+			}
+			#tbottom{
+				position: relative;s
+				width: 100%;
+				height: 37%;
+			}
+			#tbd1{
+				width: 15%;
+				height: 15%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#tbd2{
+				width: 15%;
+				height: 15%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#tbd3{
+				width: 15%;
+				height: 15%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#tbottom img{
+				position: absolute;
+				width: 35%;
+				height: 50%;
+				left: 32%;
+				top: 40%;
+				display: none;
+			}
+			/*--------------------------------*/
+			#page3{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/2/1-14.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 27;
+			}
+			#p3i1{
+				position: absolute;
+				height: 23%;
+				left: 20%;
+				top: 20%;
+				display: none;
+			}
+			#p3i2{
+				position: absolute;
+				height: 21%;
+				left: 14%;
+				top: 21%;
+				display: none;
+			}
+			#p3i3{
+				position: absolute;
+				height: 30%;
+				left: 29%;
+				top: 25%;
+				display: none;
+			}
+			#p3i4{
+				position: absolute;
+				height: 15%;
+				left: 37%;
+				top: 25%;
+				display: none;
+			}
+			/*---------------------*/
+			#page4{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/3/1-24.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 26;
+			}
+			#p4i1{
+				position: absolute;
+				height: 23%;
+				left: 20%;
+				top: 18%;
+				display: none;
+			}
+			#p4i2{
+				position: absolute;
+				height: 21%;
+				left: 14%;
+				top: 19%;
+				display: none;
+			}
+			#p4i3{
+				position: absolute;
+				height: 30%;
+				left: 29%;
+				top: 23%;
+				display: none;
+			}
+			#p4i4{
+				position: absolute;
+				height: 32%;
+				left: 36%;
+				top: 25%;
+				display: none;
+			}
+			/*------------------------*/
+			#page5{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/1/1-03.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 25;
+			}
+			#ftop{
+				width: 100%;
+				height: 20%;
+				padding-top: 5%;
+			}
+			#ftd1,#ftd2,#ftd3{
+				width: 15%;
+				height: 28%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			#fcenter{
+				width: 100%;
+				height: 50%;
+				position: relative;
+			}
+			#m{
+				width: 80%;
+				height: 80%;
+				border: 1px solid black;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			#fci1{
+				position: absolute;
+				height: 80%;
+				left: 10%;
+				display: none;
+				top: -5%;
+			}
+			
+			
+			#fci2{
+				position: absolute;
+				height: 11%;
+				left: 24%;
+				top: 81%;
+				display: none;
+				opacity: 0;
+			}
+			#fci3{
+				position: absolute;
+				height: 7%;
+				left: 24%;
+				top: 91%;
+				display: none;
+				opacity: 0;
+			}
+			
+			
+			#fbottom{
+				width: 100%;
+				height: 28%;
+				padding-top: 5%;
+			}
+			#fbd1,#fbd2,#fbd3{
+				width: 15%;
+				height: 25%;
+				background-image: url(分层/1/1-001.png);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				display: none;
+			}
+			/*----------------------*/
+			#page6{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/5/1-34.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 24;
+			}
+			#p6i1,#p7i1,#p8i1,#p9i1{
+				position: absolute;
+				height: 8%;
+				left: 8%;
+				top: 14%;
+				display: none;
+			}
+			#p6i2{
+				position: absolute;
+				height: 8%;
+				left: 3%;
+				top: 14%;
+				display: none;
+				opacity: 0;
+			}
+			#p6i3,#p7i3,#p8i3,#p9i3{
+				position: absolute;
+				height: 3%;
+				left: 27%;
+				top: 20%;
+				display: none;
+			}
+			#p6i4,#p7i4,#p8i4,#p9i4{
+				position: absolute;
+				height: 6%;
+				left: 9%;
+				top: 29%;
+				z-index: 100;
+				display: none;
+				opacity: 0;
+			}
+			#p6i5,#p7i5,#p8i5,#p9i5{
+				position: absolute;
+				height: 16%;
+				left: 70%;
+				top: 65%;
+				z-index: 10;
+				display: none;
+				opacity: 0;
+			}
+			#p6i6,#p7i6,#p8i6,#p9i6{
+				width: 87%;
+				position: absolute;
+				height: 42%;
+				left: 7%;
+				top: 31%;
+				display: none;
+				opacity: 0;
+			}
+			#p6i7,#p7i7,#p8i7,#p9i7{
+				position: absolute;
+				height: 5%;
+				left: 63%;
+				top: 67%;
+				display: none;
+				opacity: 0;
+			}
+			#p6i8,#p7i8,#p8i8,#p9i8{
+				position: absolute;
+				height: 1%;
+				left: 7%;
+				top: 84%;
+				display: none;
+				opacity: 0;
+			}
+			#p6i9,#p7i9,#p8i9,#p9i9{
+				position: absolute;
+				height: 5%;
+				left: 7%;
+				top: 86%;
+				display: none;
+				opacity: 0;
+			}
+			/*--------------------------*/
+			#page7{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/6/1-45.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 23;
+			}
+			#p7i2{
+				position: absolute;
+				height: 5%;
+				left: 14%;
+				top: 15%;
+				display: none;
+				opacity: 0;
+			}
+			/*------------------*/
+			#page8{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/7/1-56.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 22;
+			}
+			#p8i2{
+				position: absolute;
+				height: 5%;
+				left: 18%;
+				top: 15%;
+				display: none;
+				opacity: 0;
+			}
+			#page9{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/8/1-62.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 21;
+			}
+			#p9i2{
+				position: absolute;
+				height: 2%;
+				left: 13%;
+				top: 20%;
+				display: none;
+				opacity: 0;
+			}
+			/*page10-------------------------------*/
+			#page10{
+				width: 100%;
+				height: 100%;
+				background-image: url(分层/9/1-65.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				overflow: hidden;
+				/*display: none;*/
+				z-index: 20;
+			}
+			#p10i1{
+				position: absolute;
+				height: 7%;
+				left: 27%;
+				top: 12%;
+				display: none;
+			}
+			#p10i2{
+				position: absolute;
+				height: 33%;
+				left: 43%;
+				top: 37%;
+				display: none;
+			}
+			#p10i3{
+				position: absolute;
+				height: 35%;
+				left: 60%;
+				top: 43%;
+				display: none;
+			}
+			#p10i4{
+				position: absolute;
+				height: 29%;
+				left: 33%;
+				top: 39%;
+				display: none;
+			}
+			#p10i5{
+				position: absolute;
+				height: 29%;
+				left: 51%;
+				top: 46%;
+				display: none;
+			}
+			#p10i6{
+				position: absolute;
+				height: 4%;
+				left: 30%;
+				top: 79%;
+				display: none;
+			}
+		</style>
+	</head> 
+	<body>
+		<audio src="static/Symphony-of-Specters - The Kings Summit.mp3" autoplay="autoplay"></audio>
+		<main>
+			<img id="p" src="分层/0/play.png" alt="" />
+			<div style="width: 100%;height: 100%;" class="swiper-container">
+  			<div class="swiper-wrapper">
+			<div id="page1" class="swiper-slide" data-index="1">
+				<img src="分层/0/1-02.png" alt="" />
+			</div>
+			<div id="page2" class="swiper-slide" data-index="2">
+				<div id="ttop">
+					<div id="ttd1"></div>
+					<div id="ttd2"></div>
+					<div id="ttd3"></div>
+				</div>
+				<div id="tcenter">
+					<img id="tci1" src="分层/1/1-09.png" alt="" />
+					<img id="tci2" src="分层/1/1-11.png" alt="" />
+					<img id="tci3" src="分层/1/1-08.png" alt="" />
+					<img id="tci4" src="分层/1/1-10.png" alt="" />
+					<img id="tci5" src="分层/1/1-12.png" alt="" />
+					<img id="tci6" src="分层/1/1-13.png" alt="" />
+				</div>
+				<div id="tbottom">
+					<div id="tbd1"></div>
+					<div id="tbd2"></div>
+					<div id="tbd3"></div>
+					<img src="分层/1/1-07.png" alt="" />
+				</div>
+			</div>
+			<div id="page3" class="swiper-slide" data-index="3">
+				<img id="p3i1" src="分层/2/1-16.png" alt="" />
+				<img id="p3i2" src="分层/2/1-15.png" alt="" />
+				<img id="p3i3" src="分层/2/1-17.png" alt="" />
+				<img id="p3i4" src="分层/2/1-19.png" alt="" />
+			</div>
+			<div id="page4" class="swiper-slide" data-index="4">
+				<img id="p4i1" src="分层/3/1-21.png" alt="" />
+				<img id="p4i2" src="分层/3/1-20.png" alt="" />
+				<img id="p4i3" src="分层/3/1-22.png" alt="" />
+				<img id="p4i4" src="分层/3/1-23.png" alt="" />
+			</div>
+			<div id="page5" class="swiper-slide" data-index="5">
+				<div id="ftop">
+					<div id="ftd1"></div>
+					<div id="ftd2"></div>
+					<div id="ftd3"></div>
+				</div>
+				<div id="fcenter">
+					<img src="分层/4/GIF.gif" alt="" id="fci1"/>
+					<img src="分层/4/1-31.png" alt="" id="fci2" />
+					<img src="分层/4/1-33.png" alt="" id="fci3" />
+				</div>
+				<div id="fbottom">
+					<div id="fbd1"></div>
+					<div id="fbd2"></div>
+					<div id="fbd3"></div>
+				</div>
+			</div>
+			<div id="page6" class="swiper-slide" data-index="6">
+				<img src="分层/5/1-36.png" alt="" id="p6i1" />
+				<img src="分层/5/1-35.png" alt="" id="p6i2" />
+				<img src="分层/5/1-37.png" alt="" id="p6i3" />
+				<img src="分层/5/1-38.png" alt="" id="p6i4" />
+				<img src="分层/5/1-39.png" alt="" id="p6i5" />
+				<img src="分层/5/1-40.png" alt="" id="p6i6" />
+				<!--<img src="分层/5/1-38.png" alt="" id="p6i7" />-->
+				<img src="分层/5/1-41.png" alt="" id="p6i8" />
+				<img src="分层/5/1-42.png" alt="" id="p6i9" />
+			</div>
+			<div id="page7" class="swiper-slide" data-index="7">
+				<img src="分层/6/1-48.png" alt="" id="p7i1" />
+				<img src="分层/6/1-49.png" alt="" id="p7i2" />
+				<img src="分层/5/1-37.png" alt="" id="p7i3" />
+				<img src="分层/6/1-46.png" alt="" id="p7i4" />
+				<img src="分层/5/1-39.png" alt="" id="p7i5" />
+				<img src="分层/6/1-47.png" alt="" id="p7i6" />
+				<!--<img src="分层/6/1-46.png" alt="" id="p6i7" />-->
+				<img src="分层/6/1-43.png" alt="" id="p7i8" />
+				<img src="分层/6/1-44.png" alt="" id="p7i9" />
+			</div>
+			<div id="page8" class="swiper-slide" data-index="8">
+				<img src="分层/7/1-51.png" alt="" id="p8i1" />
+				<img src="分层/7/1-52.png" alt="" id="p8i2" />
+				<img src="分层/5/1-37.png" alt="" id="p8i3" />
+				<img src="分层/7/1-53.png" alt="" id="p8i4" />
+				<img src="分层/5/1-39.png" alt="" id="p8i5" />
+				<img src="分层/7/1-50.png" alt="" id="p8i6" />
+				<!--<img src="分层/5/1-38.png" alt="" id="p6i7" />-->
+				<img src="分层/7/1-54.png" alt="" id="p8i8" />
+				<img src="分层/7/1-55.png" alt="" id="p8i9" />
+			</div>
+			<div id="page9" class="swiper-slide" data-index="9">
+				<img src="分层/8/1-57.png" alt="" id="p9i1" />
+				<img src="分层/8/1-58.png" alt="" id="p9i2" />
+				<img src="分层/5/1-37.png" alt="" id="p9i3" />
+				<img src="分层/8/1-61.png" alt="" id="p9i4" />
+				<img src="分层/5/1-39.png" alt="" id="p9i5" />
+				<img src="分层/8/1-63.png" alt="" id="p9i6" />
+				<!--<img src="分层/5/1-38.png" alt="" id="p6i7" />-->
+				<img src="分层/8/1-59.png" alt="" id="p9i8" />
+				<img src="分层/8/1-60.png" alt="" id="p9i9" />
+			</div>
+			<div id="page10" class="swiper-slide" data-index="10">
+				<img src="分层/9/1-64.png" alt="" id="p10i1" />
+				<img src="分层/9/1-68.png" alt="" id="p10i2" />
+				<img src="分层/9/1-69.png" alt="" id="p10i3" />
+				<img src="分层/9/1-67.png" alt="" id="p10i4" />
+				<img src="分层/9/1-70.png" alt="" id="p10i5" />
+				<img src="分层/9/1-66.png" alt="" id="p10i6" />
+			</div>
+			</div>
+			</div>
+		</main>
+	</body>
+	<script src="jquery.js"></script>
+	<script src="swiper-3.4.2.min.js"></script>
+	<script src="swiper.animate1.0.2.min.js"></script>
+	<script>
+		window.onload= function(e){
+			console.dir($("page"+'i'))
+			var mySwiper = new Swiper('.swiper-container',{});
+			
+			var x=true
+			var audio = document.querySelector("audio")
+			$("#p")[0].addEventListener("touchstart",function(){
+				  if(x!=true){
+				  	$("#p")[0].src = "分层/0/play.png"
+				  }else{
+				  	$("#p")[0].src = "分层/0/pause.png"
+				  }
+				  x = !x
+				  audio.muted = !audio.muted
+			})
+			
+			
+//			window.addEventListener("touchstart",function(){
+//				$('#ttd1').css("display",'none')
+//				$('#ttd2').css("display",'none')
+//				$('#ttd3').css("display",'none')
+//				$('#tci1,#tci3').css("display",'none')
+//						.animate({
+//							top:'10%'
+//						})
+//				$('#tci2,#tci4').css("display",'none')
+//						.animate({
+//							top:'10%'
+//						})
+//				$('#tci5').css("display",'none')
+//						.animate({
+//							top:'10%'
+//						})
+//				$('#tci6').css("display",'none')
+//						.animate({
+//							top:'10%'
+//						})		
+//				$('#tbd1').css("display",'none')		
+//				$('#tbd2').css("display",'none')
+//				$('#tbd3').css("display",'none')
+//				$('#tbottom img').css("display",'none')
+//				$('#p3i1,#p3i2').css('display','none')
+//					.animate({
+//						top:'20%'
+//					})
+//			$('#p3i3').css('display','none')
+//					.animate({
+//						top:'25%'
+//					})
+//			$('#p3i4').css('display','none')
+//					.animate({
+//						top:'25%'
+//					})
+//			$('#p4i1').css('display','none')
+//					.animate({
+//						top:'18%'
+//					})
+//					$('#p4i2').css('display','none')
+//					.animate({
+//						top:'19%'
+//					})
+//			$('#p4i3').css('display','none')
+//					.animate({
+//						top:'23%'
+//					})
+//			$('#p4i4').css('display','none')
+//					.animate({
+//						top:'23%'
+//					})		
+//			$('#ftd1').css('display','none')
+//			$('#ftd2').css('display','none')
+//			$('#ftd3').css('display','none')
+//			$("#fci1").css("display",'none')
+//			$('#fci2').css('display','none')
+//					.animate({
+//						opacity:'0'
+//					})
+//			$('#fci3').css('display','none')
+//					.animate({
+//						opacity:'0'
+//					})
+//			$('#fbd1').css('display','none')
+//			$('#fbd2').css('display','none')
+//			$('#fbd3').css('display','none')
+//			$('#p6i1').css('display','none')
+//			$('#p6i2').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p6i3').css('display','none')
+//			$('#p6i4').css('display','none')
+//					.animate({
+//						opacity:0 
+//					})
+//					$('#p6i5').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p6i6').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p6i8').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p6i9').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					
+//				$('#p7i1').css('display','none')
+//			$('#p7i2').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p7i3').css('display','none')
+//			$('#p7i4').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p7i5').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p7i6').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p7i8').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p7i9').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p8i1').css('display','none')
+//			$('#p8i2').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p8i3').css('display','none')
+//			$('#p8i4').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p8i5').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p8i6').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p8i8').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p8i9').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p9i1').css('display','none')
+//			$('#p9i2').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p9i3').css('display','none')
+//			$('#p9i4').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p9i5').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p9i6').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p9i8').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//					$('#p9i9').css('display','none')
+//					.animate({
+//						opacity:0
+//					})
+//			$('#p10i1').css('display','none')
+//			$('#p10i2').css('display','none')
+//					.animate({
+//						top:'37%' 
+//					})
+//					$('#p10i4').css('display','none')
+//					.animate({
+//						top:'39%' 
+//					})
+//			$('#p10i3').css('display','none')
+//					.animate({
+//						top:'43%' 
+//					})
+//					$('#p10i5').css('display','none')
+//					.animate({
+//						top:'46%' 
+//					})
+//			$('#p10i6').css('display','none')
+				play2()
+				play3()
+				play4()
+				play5()
+				play6()
+				play7()
+				play8()
+				play9()
+				play10()
+//			})
+			
+			
+			$('body').bind('touchstart',function(e){
+			    startX = e.originalEvent.changedTouches[0].pageX,
+			    startY = e.originalEvent.changedTouches[0].pageY;
+			});
+			$('body').bind('touchmove',function(e){
+			    //获取滑动屏幕时的X,Y
+			    endX = e.originalEvent.changedTouches[0].pageX,
+			    endY = e.originalEvent.changedTouches[0].pageY;
+			    //获取滑动距离
+			    distanceX = endX-startX;
+			    distanceY = endY-startY;
+			    //判断滑动方向
+			    if(Math.abs(distanceX)>Math.abs(distanceY) && distanceX>0){
+			        console.log('往右滑动');
+			    }else if(Math.abs(distanceX)>Math.abs(distanceY) && distanceX<0){
+			        console.log('往左滑动');
+			    }else if(Math.abs(distanceX)<Math.abs(distanceY) && distanceY<0){
+			        console.log('往上滑动');
+			    }else if(Math.abs(distanceX)<Math.abs(distanceY) && distanceY>0){
+			        console.log('往下滑动');
+			    }else{
+			        console.log('点击未滑动');
+			    }
+				
+			});
+
+
+			
+			
+			//page2---------------------
+			
+			function play2(){
+				setTimeout(function(){
+					$('#ttd1').css("display",'block')
+				},500)
+				setTimeout(function(){
+					$('#ttd2').css("display",'block')
+				},1000)
+				setTimeout(function(){
+					$('#ttd3').css("display",'block')
+				},1500)
+				setTimeout(function(){
+					$('#tci1,#tci3').css("display",'block')
+					.animate({
+						top:'0'
+					},800)
+				},2300)
+				setTimeout(function(){
+					$('#tci2,#tci4').css("display",'block')
+					.animate({
+						top:'0'
+					},800)
+				},3100)
+				setTimeout(function(){
+					$('#tci5').css("display",'block')
+					.animate({
+						top:'0'
+					},800)
+				},3900)
+				setTimeout(function(){
+					$('#tci6').css("display",'block')
+					.animate({
+						top:'0'
+					},800)
+				},4700)
+				setTimeout(function(){
+					$('#tbd1').css("display",'block')
+				},5200)
+				setTimeout(function(){
+					$('#tbd2').css("display",'block')
+				},5700)
+				setTimeout(function(){
+					$('#tbd3').css("display",'block')
+				},6200)
+				setTimeout(function(){
+					$('#tbottom img').css("display",'block')
+				},6700)
+			}
+			
+			
+			
+			//page3-----------------------
+			function play3(){
+				setTimeout(function(){
+					$('#p3i1,#p3i2').css('display','block')
+					.animate({
+						top:'10%'
+					},1000)
+				},500)
+				setTimeout(function(){
+					$('#p3i3').css('display','block')
+					.animate({
+						top:'15%'
+					},1000)
+				},1500)
+				setTimeout(function(){
+					$('#p3i4').css('display','block')
+					.animate({
+						top:'15%'
+					},1000)
+				},2500)
+			}
+			
+			
+			
+			//page4-------------------
+			function play4(){
+				setTimeout(function(){
+					$('#p4i1').css('display','block')
+					.animate({
+						top:'8%'
+					},1000)
+					$('#p4i2').css('display','block')
+					.animate({
+						top:'9%'
+					},1000)
+				},500)
+				setTimeout(function(){
+					$('#p4i3').css('display','block')
+					.animate({
+						top:'13%'
+					},1000)
+				},1500)
+				setTimeout(function(){
+					$('#p4i4').css('display','block')
+					.animate({
+						top:'13%'
+					},1000)
+				},2500)
+			}
+			
+			
+			//page5--------------------
+			function play5(){
+				setTimeout(function(){
+					$('#ftd1').css('display','block')
+				},500)
+				setTimeout(function(){
+					$('#ftd2').css('display','block')
+				},1000)
+				setTimeout(function(){
+					$('#ftd3').css('display','block')
+				},1500)
+				setTimeout(function(){
+					$("#fci1").css("display",'block')
+					$("#fci1")[0].src = ""
+					$("#fci1")[0].src = "分层/4/GIF.gif"
+				},2500)
+				setTimeout(function(){
+					$('#fci2').css('display','block')
+					.animate({
+						opacity:'1'
+					},1000)
+				},5500)
+				setTimeout(function(){
+					$('#fci3').css('display','block')
+					.animate({
+						opacity:'1'
+					},1000)
+				},6500)
+				setTimeout(function(){
+					$('#fbd1').css('display','block')
+				},7500)
+				setTimeout(function(){
+					$('#fbd2').css('display','block')
+				},8500)
+				setTimeout(function(){
+					$('#fbd3').css('display','block')
+				},9500)
+			}
+			
+			
+			//page6--------------------------
+			function play6(){
+				setTimeout(function(){
+					$('#p6i1').css('display','block')
+				},500)
+				setTimeout(function(){
+					$('#p6i2').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},1000)
+				setTimeout(function(){
+					$('#p6i3').css('display','block')
+				},1500)
+				setTimeout(function(){
+					$('#p6i4').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p6i5').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p6i6').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p6i8').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p6i9').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},2500)
+			}
+			
+			
+			//page7--------------------------
+			function play7(){
+				setTimeout(function(){
+					$('#p7i1').css('display','block')
+				},500)
+				setTimeout(function(){
+					$('#p7i2').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},1000)
+				setTimeout(function(){
+					$('#p7i3').css('display','block')
+				},1500)
+				setTimeout(function(){
+					$('#p7i4').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p7i5').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p7i6').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p7i8').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p7i9').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},2500)
+			}
+			
+			
+			//page8-----------------------------
+			function play8(){
+				setTimeout(function(){
+					$('#p8i1').css('display','block')
+				},500)
+				setTimeout(function(){
+					$('#p8i2').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},1000)
+				setTimeout(function(){
+					$('#p8i3').css('display','block')
+				},1500)
+				setTimeout(function(){
+					$('#p8i4').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p8i5').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p8i6').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p8i8').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p8i9').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},2500)
+			}
+			
+			
+			//page9-------------------------------
+			function play9(){
+				setTimeout(function(){
+					$('#p9i1').css('display','block')
+				},500)
+				setTimeout(function(){
+					$('#p9i2').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},1000)
+				setTimeout(function(){
+					$('#p9i3').css('display','block')
+				},1500)
+				setTimeout(function(){
+					$('#p9i4').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p9i5').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p9i6').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p9i8').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+					$('#p9i9').css('display','block')
+					.animate({
+						opacity:1
+					},1000)
+				},2500)
+			}
+			
+			
+			//page10----------------------------
+			function play10(){
+				setTimeout(function(){
+					$('#p10i1').css('display','block')
+				},500)
+				setTimeout(function(){
+					$('#p10i2').css('display','block')
+					.animate({
+						top:'27%' 
+					},1000)
+					$('#p10i4').css('display','block')
+					.animate({
+						top:'29%' 
+					},1000)
+				},1500)
+				setTimeout(function(){
+					$('#p10i3').css('display','block')
+					.animate({
+						top:'33%' 
+					},1000)
+					$('#p10i5').css('display','block')
+					.animate({
+						top:'36%' 
+					},1000)
+				},2500)
+				setTimeout(function(){
+					$('#p10i6').css('display','block')
+				},3500)
+			}
+		
+			
+		}
+	</script>
+</html>
