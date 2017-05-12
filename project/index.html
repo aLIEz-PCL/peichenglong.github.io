@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="index.css"/>
-		<style>
+		<style> 
 			
 		</style>
 	</head>
@@ -46,10 +46,12 @@
 		window.addEventListener('onorientationchange' in window?'orientationchange':'resize', function(){  
 	    	setTimeout(orientInit, 100);  
 		},false)
-			
-		$(".sycenter").animate({
-			
+		
+		setTimeout(function(){
+			$(".sycenter img").css("transform","scale(1,1)")
+			.css('transition-duration',"1s")
 		})
+		
 		var begin = $(".sybottom #img2")[0]
 		begin.addEventListener("touchstart",function(){
 			  

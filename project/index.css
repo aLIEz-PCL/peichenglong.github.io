@@ -35,6 +35,7 @@ html,body{
 	width: 33%;
 	height: 100%;
 	margin: 0 auto;
+	transform: scale(3,3);
 }
 .sybottom{
 	width: 100%;
@@ -48,7 +49,7 @@ html,body{
 }
 .sybottom #img2{
 	display: block;
-	width: 23%;
+	width: 22%;
 	height: 42%;
 	margin: 0 auto;
 }
