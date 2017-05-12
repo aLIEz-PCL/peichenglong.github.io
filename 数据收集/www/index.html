@@ -9,7 +9,20 @@
 		</style>
 	</head>
 	<body>
-		
+		<form id="regist-form" action="/api/regist" method="post">
+			<lable for="account">用户名:</lable>
+			<!--pattern用于输入验证得正则表达式，如果input中的内容不符合该表达式，则表单验证不通过-->
+			<input type="text" name="account" id="account" autocomplete="off" required placeholder="手机号（必填）"/><br />
+			
+			<lable for="psw">密码:</lable>
+			<input type="password" name="psw" id="psw" required placeholder=""/><br />
+			
+			<lable for="confirm">确认密码:</lable>
+			<input type="password" id="confirm" name="confirm" required/><br />
+			
+			
+			<input type="submit" value="提交"/>
+		</form>
 	</body>
 	<script type="text/javascript">
 		
