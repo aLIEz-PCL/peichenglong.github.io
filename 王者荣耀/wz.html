@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="裴成龙"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		$(function(){
+			var b = document.getElementsByTagName('body')[0]
+			function orientInit(){  
+			    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';  
+			    if(orientChk =='landscape'){  
+			        //这里是横屏下需要执行的事件  
+			        b.style.margin= '0';
+					b.style.padding= '0';
+					b.style.width='100%';
+					b.style.height = '100%';
+					b.style.overflow = 'hidden';
+			    }else{  
+			        //这里是竖屏下需要执行的事件
+			    }  
+			}    
+			orientInit();
+		window.addEventListener('onorientationchange' in window?'orientationchange':'resize', function(){  
+	    	setTimeout(orientInit, 100);  
+		},false)
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		})
+	</script>
+</html>
