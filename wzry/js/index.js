@@ -1,4 +1,5 @@
 window.onload = function(){
+	wx.hideAllNonBaseMenuItem();
 	var w = document.getElementsByTagName('body')[0]
 	function orientInit(){  
 	    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';  
