@@ -1,5 +1,4 @@
 window.onload = function(){
-	wx.closeWindow();
 	var w = document.getElementsByTagName('body')[0]
 	function orientInit(){  
 	    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';  
