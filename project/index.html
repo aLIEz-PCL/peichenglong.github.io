@@ -47,18 +47,30 @@
 				<div id="lfive" data-index="4"></div>
 			</div>
 			<div class="xqcenter">
-				
+				<div id="focus" class="focus">
+					<div class="hd">
+						<ul></ul>
+					</div>
+					<div class="bd">
+						<ul>
+							<li><a href="#"><img _src="img/图/1-1.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="img/图/1-2.jpg" src="images/blank.png"/></a></li>
+							<!--<li><a href="#"><img _src="" src=""/></a></li>-->
+						</ul>
+					</div>
+				</div>
 			</div>
 			<div class="xqright">
-				<div id="rone" data-index="5"></div>
-				<div id="rtwo" data-index="6"></div>
-				<div id="rthree" data-index="7"></div>
-				<div id="rfour" data-index="8"></div>
-				<div id="rfive" data-index="9"></div>
+				<div id="rone" data-index="0"></div>
+				<div id="rtwo" data-index="1"></div>
+				<div id="rthree" data-index="2"></div>
+				<div id="rfour" data-index="3"></div>
+				<div id="rfive" data-index="4"></div>
 			</div>
 		</div>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
+	<script src="libs/TouchSlide.1.1.js"></script>
 	<script>
 		$(function(){
 			var b = document.getElementsByTagName('body')[0]
@@ -100,23 +112,30 @@
 		
 		var array1 = ["3_02","3_07","3_11","3_16","3_22"]
 		var array2 = ["3_04","3_08","3_13","3_19","3_23"]
-		var xq = $(".xiangqing")[0]
-		xq.addEventListener("touchstart",function(e){
+		var xqleft = $(".xqleft")[0]
+		var xqright = $(".xqright")[0]
+		xqleft.addEventListener("touchstart",function(e){
 			var i = e.target.dataset.index
-			if(i<=4){
-				$(".xqleft div").css("backgroundImage","")
-				$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
-			}else{
-				i=i-5
-				$(".xqright div").css("backgroundImage","")
-				$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array2[i] +".png)"
-			}
-			
+			$(".xqleft div").css("backgroundImage","")
+			$(".xqright div").css("backgroundImage","")
+			$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
+		},false)
+		xqright.addEventListener("touchstart",function(e){
+			var i = e.target.dataset.index
+			$(".xqleft div").css("backgroundImage","")
+			$(".xqright div").css("backgroundImage","")
+			$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array2[i] +".png)"
 		},false)
 			
 			
-			
-			
+		TouchSlide({ 
+			slideCell:"#focus",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell:".bd ul", 
+			effect:"left", 
+			autoPage:true, //自动分页
+			switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+		});	
 			
 			
 			
