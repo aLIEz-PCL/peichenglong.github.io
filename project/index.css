@@ -58,7 +58,7 @@ html,body{
 
 /*VS对战页面----------------------------------*/
 .vs{
-	/*display: none;*/
+	display: none;
 	width: 100%;
 	height: 100%;
 	background-image: url(img/2/22.png);
@@ -100,5 +100,101 @@ html,body{
 .xiangqing{
 	width: 100%;
 	height: 100%;
-	background-image: url;
+	background-image: url(img/图/1-1.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: flex;
+}
+.xqleft{
+	width: 20%;
+	height: 100%;
+	overflow: hidden;
+}
+#lone{
+	width: 84%;
+	height: 19%;
+	margin-top: 1%;
+	background-image: url(img/3/33_02.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#ltwo{
+	width: 84%;
+	height: 20%;
+	background-image: url(img/3/33_07.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#lthree{
+	width: 100%;
+	height: 20%;
+	background-image: url(img/3/33_11.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#lfour{
+	width: 84%;
+	height: 20%;
+	background-image: url(img/3/33_16.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#lfive{
+	width: 84%;
+	height: 20%;
+	background-image: url(img/3/33_22.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.xqcenter{
+	width: 60%;
+	height: 100%;
+}
+.xqright{
+	width: 20%;
+	height: 100%;
+}
+#rone{
+	width: 84%;
+	height: 19%;
+	margin-top: 1%;
+	background-image: url(img/3/33_04.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	left: 16%;
+}
+#rtwo{
+	width: 84%;
+	height: 20%;
+	background-image: url(img/3/33_08.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	left: 16%;
+}
+#rthree{
+	width: 100%;
+	height: 20%;
+	background-image: url(img/3/33_13.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+#rfour{
+	width: 84%;
+	height: 20%;
+	background-image: url(img/3/33_19.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	left: 16%;
+}
+#rfive{
+	width: 84%;
+	height: 20%;
+	background-image: url(img/3/33_23.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	left: 16%;
 }

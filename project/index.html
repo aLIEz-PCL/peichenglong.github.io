@@ -39,9 +39,23 @@
 		</div>
 		<!--详情页面------------------------------------------->
 		<div class="xiangqing">
-			<div id="xqleft"></div>
-			<div id="xqcenter"></div>
-			<div id="xqright"></div>
+			<div class="xqleft">
+				<div id="lone" data-index="0"></div>
+				<div id="ltwo" data-index="1"></div>
+				<div id="lthree" data-index="2"></div>
+				<div id="lfour" data-index="3"></div>
+				<div id="lfive" data-index="4"></div>
+			</div>
+			<div class="xqcenter">
+				
+			</div>
+			<div class="xqright">
+				<div id="rone" data-index="5"></div>
+				<div id="rtwo" data-index="6"></div>
+				<div id="rthree" data-index="7"></div>
+				<div id="rfour" data-index="8"></div>
+				<div id="rfive" data-index="9"></div>
+			</div>
 		</div>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
@@ -83,11 +97,22 @@
 				$('.shouye').css("display","none")
 			})
 		})
+		
+		var array1 = ["3_02","3_07","3_11","3_16","3_22"]
+		var array2 = ["3_04","3_08","3_13","3_19","3_23"]
+		var xq = $(".xiangqing")[0]
+		xq.addEventListener("touchstart",function(e){
+			var i = e.target.dataset.index
+			if(i<=4){
+				$(".xqleft div").css("backgroundImage","")
+				$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
+			}else{
+				i=i-5
+				$(".xqright div").css("backgroundImage","")
+				$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array2[i] +".png)"
+			}
 			
-			
-			
-			
-			
+		},false)
 			
 			
 			
