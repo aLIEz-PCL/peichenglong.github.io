@@ -60,8 +60,8 @@
 					</div>
 					<div class="bd">
 						<ul>
-							<li><a href="#"><img id="i0" _src="" src="img/图/blank.png" /></a></li>
-							<li><a href="#"><img id="i1" _src="" src="img/图/blank.png"/></a></li>
+							<li><a href="#"><img id="i0" _src="img/图/1-1.jpg" src="img/图/blank.png" /></a></li>
+							<li><a href="#"><img id="i1" _src="img/图/1-2.jpg" src="img/图/blank.png"/></a></li>
 							<!--<li><a href="#"><img _src="" src=""/></a></li>-->
 						</ul>
 					</div>
@@ -95,6 +95,7 @@
 	<script>
 		window.onload = function(){
 			$(function(){
+				var slider = new TouchSlide()
 				$(".shouye").css("display","block")
 				var b = document.getElementsByTagName('body')[0]
 				function orientInit(){
@@ -135,10 +136,10 @@
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
-						$(".xiangqing").css("display","flex")
 					},3000)
 				},300)
 			})
+				
 			
 			var array0 = ["3_02","3_07","3_11","3_16","3_22"]
 			var array1 = ["3_04","3_08","3_13","3_19","3_23"]
@@ -160,9 +161,9 @@
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
 			xqleft.addEventListener("touchstart",function(e){
+				$("#tishi").css("display","none")
 				$(".xqleft").css("opacity",'1')
 				$(".xqright").css("opacity",'1')
-				$("#tishi").css("display","none")
 				var i = e.target.dataset.index
 				if(i===undefined){return}
 				$(".xqleft div").css("backgroundImage","")
@@ -172,9 +173,9 @@
 				$("#i1")[0].src = "img/图/"+ bj0[i][1] +".jpg"
 			},false)
 			xqright.addEventListener("touchstart",function(e){
+				$("#tishi").css("display","none")
 				$(".xqleft").css("opacity",'1')
 				$(".xqright").css("opacity",'1')
-				$("#tishi").css("display","none")
 				var i = e.target.dataset.index
 				if(i===undefined){return}
 				$(".xqleft div").css("backgroundImage","")
@@ -196,7 +197,8 @@
 					$('.xiangqing').css("display","none")
 					$(".jieshu").css("display","block")
 				},300)
-			})	
+			})
+			
 			TouchSlide({ 
 				slideCell:"#focus",
 				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
@@ -205,10 +207,10 @@
 	//			effect:"leftLoop", //循环轮播
 				autoPlay:true,//自动播放
 				autoPage:true, //自动分页
-				switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+				switchLoad:"_src"//切换加载，真实图片路径为"_src"
 			});
 				
-				
+			
 				
 				
 				
