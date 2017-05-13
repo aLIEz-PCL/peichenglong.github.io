@@ -12,6 +12,9 @@
 		</style>
 	</head>
 	<body>
+		<main>
+			<h1>请在横屏模式下体验</h1>
+		</main>
 		<!--首页封面------------------------------------------------->
 		<div class="shouye">
 			<div class="sytop">
@@ -47,18 +50,23 @@
 				<div id="lfive" data-index="4"></div>
 			</div>
 			<div class="xqcenter">
+				<div id="tishi">
+					<div id="dian"></div>
+					<h2>点击头像查看具体信息</h2>
+				</div>
 				<div id="focus" class="focus">
 					<div class="hd">
 						<ul></ul>
 					</div>
 					<div class="bd">
 						<ul>
-							<li><a href="#"><img _src="img/图/1-1.jpg" src="images/blank.png" /></a></li>
-							<li><a href="#"><img _src="img/图/1-2.jpg" src="images/blank.png"/></a></li>
+							<li><a href="#"><img id="i0" _src="" src="img/图/blank.png" /></a></li>
+							<li><a href="#"><img id="i1" _src="" src="img/图/blank.png"/></a></li>
 							<!--<li><a href="#"><img _src="" src=""/></a></li>-->
 						</ul>
 					</div>
 				</div>
+				<div id="stop"></div>
 			</div>
 			<div class="xqright">
 				<div id="rone" data-index="0"></div>
@@ -77,7 +85,8 @@
 			function orientInit(){
 			    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';  
 			    if(orientChk =='landscape'){  
-			        //这里是横屏下需要执行的事件  
+			        //这里是横屏下需要执行的事件
+			        $("main").css("display","none")
 			        b.style.margin= '0';
 					b.style.padding= '0';
 					b.style.width='100%';
@@ -85,6 +94,7 @@
 					b.style.overflow = 'hidden';
 			    }else{  
 			        //这里是竖屏下需要执行的事件
+			        $("main").css("display","flex")
 			    }  
 			}    
 			orientInit();
@@ -110,32 +120,71 @@
 			})
 		})
 		
-		var array1 = ["3_02","3_07","3_11","3_16","3_22"]
-		var array2 = ["3_04","3_08","3_13","3_19","3_23"]
+		
+		
+		var array0 = ["3_02","3_07","3_11","3_16","3_22"]
+		var array1 = ["3_04","3_08","3_13","3_19","3_23"]
+		var bj0 = [
+			["1-1","1-2"],
+			["2-1","2-2"],
+			["3-1","3-2"],
+			["4-1","4-2"],
+			["5-1","5-2"]
+		]
+		var bj1 = [
+			["6-1","6-1"],
+			["7-1","7-1"],
+			["8-1","8-2"],
+			["9-1","9-2"],
+			["10","10"]
+		]
+		
 		var xqleft = $(".xqleft")[0]
 		var xqright = $(".xqright")[0]
 		xqleft.addEventListener("touchstart",function(e){
+			$(".xqleft").css("opacity",'1')
+			$(".xqright").css("opacity",'1')
+			$("#tishi").css("display","none")
 			var i = e.target.dataset.index
+			if(i===undefined){return}
 			$(".xqleft div").css("backgroundImage","")
 			$(".xqright div").css("backgroundImage","")
-			$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
+			$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array0[i] +".png)"
+			$("#i0")[0].src = "img/图/"+ bj0[i][0] +".jpg"
+			$("#i1")[0].src = "img/图/"+ bj0[i][1] +".jpg"
 		},false)
 		xqright.addEventListener("touchstart",function(e){
+			$(".xqleft").css("opacity",'1')
+			$(".xqright").css("opacity",'1')
+			$("#tishi").css("display","none")
 			var i = e.target.dataset.index
+			if(i===undefined){return}
 			$(".xqleft div").css("backgroundImage","")
 			$(".xqright div").css("backgroundImage","")
-			$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array2[i] +".png)"
+			$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
+			$("#i0")[0].src = "img/图/"+ bj1[i][0] +".jpg"
+			$("#i1")[0].src = "img/图/"+ bj1[i][1] +".jpg"
 		},false)
-			
-			
+		
+		var stop = $("#stop")[0]
+		stop.addEventListener("touchstart",function(){
+			$("#stop").css("transform","translateY(1px)")
+			.css("filter",'drop-shadow(0px -1px 2px white)')
+		})
+		stop.addEventListener("touchend",function(){
+			$("#stop").css("transform","translateY(-1px)")
+			.css("filter",'drop-shadow(0px 0px 0px white)')
+		})	
 		TouchSlide({ 
 			slideCell:"#focus",
 			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
 			mainCell:".bd ul", 
-			effect:"left", 
+			effect:"left", //不循环轮播
+//			effect:"leftLoop", //循环轮播
+			autoPlay:true,//自动播放
 			autoPage:true, //自动分页
 			switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-		});	
+		});
 			
 			
 			
