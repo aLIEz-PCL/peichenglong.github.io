@@ -201,12 +201,13 @@
 			})
 			
 			var again = $("#jsi2")[0]
-			again.addEventListener("touchend",function(){
+			again.addEventListener("touchstart",function(){
 				$("#tishi").css("display","flex")
 				$(".xqleft").css("opacity",'0.3')
 				$(".xqright").css("opacity",'0.3')
 				$(".jieshu").css('display','none')
 				$(".shouye").css("display","block")
+				window.location.href = 'index.html'
 			})
 			
 			
