@@ -76,123 +76,146 @@
 				<div id="rfive" data-index="4"></div>
 			</div>
 		</div>
+		<!--结束页面------------------------------------>
+		<div class="jieshu">
+			
+			<div class="jstop">
+				<!--<img src="img/底/光.png" alt="" />-->
+				<img src="img/底/images/底_03.png"/>
+			</div>
+			<div class="jsbottom">
+				<img id="jsi1" src="img/底/images/底_07.png" alt="" />
+				<img id="jsi2" src="img/底/images/底_11.png" alt="" />
+				<img id="jsi3" src="img/底/images/底_13.png" alt="" />
+			</div>
+		</div>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
 	<script>
-		$(function(){
-			var b = document.getElementsByTagName('body')[0]
-			function orientInit(){
-			    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';  
-			    if(orientChk =='landscape'){  
-			        //这里是横屏下需要执行的事件
-			        $("main").css("display","none")
-			        b.style.margin= '0';
-					b.style.padding= '0';
-					b.style.width='100%';
-					b.style.height = '100%';
-					b.style.overflow = 'hidden';
-			    }else{  
-			        //这里是竖屏下需要执行的事件
-			        $("main").css("display","flex")
-			    }  
-			}    
-			orientInit();
-		window.addEventListener('onorientationchange' in window?'orientationchange':'resize', function(){  
-	    	setTimeout(orientInit, 100);  
-		},false)
-		
-		setTimeout(function(){
-			$(".sycenter img").css("transform","scale(1,1)")
-			.css('transition-duration',"1s")
-		})
-		
-		var begin = $(".sybottom #img2")[0]
-		begin.addEventListener("touchstart",function(){
-			$(".sybottom #img2").css("transform","translateY(1px)")
-			.css("filter",'drop-shadow(0px -1px 2px gold)')
-		})
-		begin.addEventListener("touchend",function(){
-			$(".sybottom #img2").css("transform","translateY(-1px)")
-			.css("filter",'drop-shadow(0px 0px 0px gold)')
+		window.onload = function(){
+			$(function(){
+				$(".shouye").css("display","block")
+				var b = document.getElementsByTagName('body')[0]
+				function orientInit(){
+				    var orientChk = document.documentElement.clientWidth > document.documentElement.clientHeight?'landscape':'portrait';  
+				    if(orientChk =='landscape'){  
+				        //这里是横屏下需要执行的事件
+				        $("main").css("display","none")
+				        b.style.margin= '0';
+						b.style.padding= '0';
+						b.style.width='100%';
+						b.style.height = '100%';
+						b.style.overflow = 'hidden';
+				    }else{  
+				        //这里是竖屏下需要执行的事件
+				        $("main").css("display","flex")
+				    }  
+				}    
+				orientInit();
+			window.addEventListener('onorientationchange' in window?'orientationchange':'resize', function(){  
+		    	setTimeout(orientInit, 100);  
+			},false)
+			
 			setTimeout(function(){
-				$('.shouye').css("display","none")
+				$(".sycenter img").css("transform","scale(1,1)")
+				.css('transition-duration',"1s")
 			})
-		})
-		
-		
-		
-		var array0 = ["3_02","3_07","3_11","3_16","3_22"]
-		var array1 = ["3_04","3_08","3_13","3_19","3_23"]
-		var bj0 = [
-			["1-1","1-2"],
-			["2-1","2-2"],
-			["3-1","3-2"],
-			["4-1","4-2"],
-			["5-1","5-2"]
-		]
-		var bj1 = [
-			["6-1","6-1"],
-			["7-1","7-1"],
-			["8-1","8-2"],
-			["9-1","9-2"],
-			["10","10"]
-		]
-		
-		var xqleft = $(".xqleft")[0]
-		var xqright = $(".xqright")[0]
-		xqleft.addEventListener("touchstart",function(e){
-			$(".xqleft").css("opacity",'1')
-			$(".xqright").css("opacity",'1')
-			$("#tishi").css("display","none")
-			var i = e.target.dataset.index
-			if(i===undefined){return}
-			$(".xqleft div").css("backgroundImage","")
-			$(".xqright div").css("backgroundImage","")
-			$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array0[i] +".png)"
-			$("#i0")[0].src = "img/图/"+ bj0[i][0] +".jpg"
-			$("#i1")[0].src = "img/图/"+ bj0[i][1] +".jpg"
-		},false)
-		xqright.addEventListener("touchstart",function(e){
-			$(".xqleft").css("opacity",'1')
-			$(".xqright").css("opacity",'1')
-			$("#tishi").css("display","none")
-			var i = e.target.dataset.index
-			if(i===undefined){return}
-			$(".xqleft div").css("backgroundImage","")
-			$(".xqright div").css("backgroundImage","")
-			$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
-			$("#i0")[0].src = "img/图/"+ bj1[i][0] +".jpg"
-			$("#i1")[0].src = "img/图/"+ bj1[i][1] +".jpg"
-		},false)
-		
-		var stop = $("#stop")[0]
-		stop.addEventListener("touchstart",function(){
-			$("#stop").css("transform","translateY(1px)")
-			.css("filter",'drop-shadow(0px -1px 2px white)')
-		})
-		stop.addEventListener("touchend",function(){
-			$("#stop").css("transform","translateY(-1px)")
-			.css("filter",'drop-shadow(0px 0px 0px white)')
-		})	
-		TouchSlide({ 
-			slideCell:"#focus",
-			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-			mainCell:".bd ul", 
-			effect:"left", //不循环轮播
-//			effect:"leftLoop", //循环轮播
-			autoPlay:true,//自动播放
-			autoPage:true, //自动分页
-			switchLoad:"_src" //切换加载，真实图片路径为"_src" 
-		});
 			
+			var begin = $(".sybottom #img2")[0]
+			begin.addEventListener("touchstart",function(){
+				$(".sybottom #img2").css("transform","translateY(1px)")
+				.css("filter",'drop-shadow(0px -1px 2px gold)')
+			})
+			begin.addEventListener("touchend",function(){
+				$(".sybottom #img2").css("transform","translateY(-1px)")
+				.css("filter",'drop-shadow(0px 0px 0px gold)')
+				setTimeout(function(){
+					$('.shouye').css("display","none")
+					$(".vs").css("display",'block')
+					setTimeout(function(){
+						$(".vs").css("display",'none')
+						$(".xiangqing").css("display","flex")
+					},3000)
+				},300)
+			})
 			
+			var array0 = ["3_02","3_07","3_11","3_16","3_22"]
+			var array1 = ["3_04","3_08","3_13","3_19","3_23"]
+			var bj0 = [
+				["1-1","1-2"],
+				["2-1","2-2"],
+				["3-1","3-2"],
+				["4-1","4-2"],
+				["5-1","5-2"]
+			]
+			var bj1 = [
+				["6-1","6-1"],
+				["7-1","7-1"],
+				["8-1","8-2"],
+				["9-1","9-2"],
+				["10","10"]
+			]
 			
-			
-			
-			
-			
-			
-		})
+			var xqleft = $(".xqleft")[0]
+			var xqright = $(".xqright")[0]
+			xqleft.addEventListener("touchstart",function(e){
+				$(".xqleft").css("opacity",'1')
+				$(".xqright").css("opacity",'1')
+				$("#tishi").css("display","none")
+				var i = e.target.dataset.index
+				if(i===undefined){return}
+				$(".xqleft div").css("backgroundImage","")
+				$(".xqright div").css("backgroundImage","")
+				$(".xqleft div")[i].style.backgroundImage = "url(img/3/"+ array0[i] +".png)"
+				$("#i0")[0].src = "img/图/"+ bj0[i][0] +".jpg"
+				$("#i1")[0].src = "img/图/"+ bj0[i][1] +".jpg"
+			},false)
+			xqright.addEventListener("touchstart",function(e){
+				$(".xqleft").css("opacity",'1')
+				$(".xqright").css("opacity",'1')
+				$("#tishi").css("display","none")
+				var i = e.target.dataset.index
+				if(i===undefined){return}
+				$(".xqleft div").css("backgroundImage","")
+				$(".xqright div").css("backgroundImage","")
+				$(".xqright div")[i].style.backgroundImage = "url(img/3/"+ array1[i] +".png)"
+				$("#i0")[0].src = "img/图/"+ bj1[i][0] +".jpg"
+				$("#i1")[0].src = "img/图/"+ bj1[i][1] +".jpg"
+			},false)
+			 
+			var stop = $("#stop")[0]
+			stop.addEventListener("touchstart",function(){
+				$("#stop").css("transform","translateY(1px)")
+				.css("filter",'drop-shadow(0px -1px 2px white)')
+			})
+			stop.addEventListener("touchend",function(){
+				$("#stop").css("transform","translateY(-1px)")
+				.css("filter",'drop-shadow(0px 0px 0px white)')
+				setTimeout(function(){
+					$('.xiangqing').css("display","none")
+					$(".jieshu").css("display","block")
+				},300)
+			})	
+			TouchSlide({ 
+				slideCell:"#focus",
+				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+				mainCell:".bd ul", 
+				effect:"left", //不循环轮播
+	//			effect:"leftLoop", //循环轮播
+				autoPlay:true,//自动播放
+				autoPage:true, //自动分页
+				switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+			});
+				
+				
+				
+				
+				
+				
+				
+				
+			})
+		}
 	</script>
 </html>
