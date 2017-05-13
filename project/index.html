@@ -95,7 +95,6 @@
 	<script>
 		window.onload = function(){
 			$(function(){
-				var slider = new TouchSlide()
 				$(".shouye").css("display","block")
 				var b = document.getElementsByTagName('body')[0]
 				function orientInit(){
@@ -194,10 +193,17 @@
 				$("#stop").css("transform","translateY(-1px)")
 				.css("filter",'drop-shadow(0px 0px 0px white)')
 				setTimeout(function(){
-					$('.xiangqing').css("display","none")
 					$(".jieshu").css("display","block")
+					.css("z-index",'200')
 				},300)
 			})
+			
+			var again = $("#jsi2")[0]
+			again.addEventListener("touchend",function(){
+				$(".jieshu").css('display','none')
+				$(".shouye").css("display","block")
+			})
+			
 			
 			TouchSlide({ 
 				slideCell:"#focus",
