@@ -24,6 +24,10 @@ main{
 	background-image: url(img/封面/11.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
 }
 .sytop{
 	width: 100%;
@@ -73,6 +77,10 @@ main{
 	background-image: url(img/2/22.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
 }
 .vscenter{
 	width: 100%;
@@ -113,6 +121,9 @@ main{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .xqleft{
 	width: 20%;
