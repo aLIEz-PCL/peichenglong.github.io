@@ -93,8 +93,22 @@
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
 	<script>
+		
 		window.onload = function(){
 			$(function(){
+				setTimeout(function(){
+					for( var i = 0;i<=4;i++){
+						$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
+						$(".xqright div")[i].style.backgroundImage = "url("+ array0[i] +")"
+					}
+				},500)
+				setTimeout(function(){
+					for( var i = 0;i<=4;i++){
+						$(".xqleft div")[i].style.backgroundImage = ""
+						$(".xqright div")[i].style.backgroundImage = ""
+					}
+				},5000)
+				
 				$(".shouye").css("display","block")
 				var b = document.getElementsByTagName('body')[0]
 				function orientInit(){
@@ -170,18 +184,7 @@
 				["img/图/10.jpg","img/图/10.jpg"]
 			]
 			
-			setTimeout(function(){
-				for( var i = 0;i<=4;i++){
-					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
-					$(".xqright div")[i].style.backgroundImage = "url("+ array0[i] +")"
-				}
-			},500)
-			setTimeout(function(){
-				for( var i = 0;i<=4;i++){
-					$(".xqleft div")[i].style.backgroundImage = ""
-					$(".xqright div")[i].style.backgroundImage = ""
-				}
-			},3000)
+			
 			
 			
 			
