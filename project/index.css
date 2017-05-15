@@ -32,12 +32,28 @@ html,body{
 	height: 100%;
 	overflow: hidden;
 }
+main div{
+	width: 80%;
+	height: 50%;
+}
+main div #one{
+	display: block;
+	width: 50%;
+	height: 50%;
+	margin: 0 auto;
+}
+main div #two{
+	display: block;
+	width: 100%;
+	height: 40%;
+	margin: 0 auto;
+}
 /*首页封面--------------------------------*/
 .shouye{
 	display: none;
 	width: 100%;
 	height: 100%;
-	background-image: url(img/封面/11.png);
+	background-image: url(img/封面/11.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -91,7 +107,7 @@ html,body{
 	display: none;
 	width: 100%;
 	height: 100%;
-	background-image: url(img/2/22.png);
+	background-image: url(img/2/22.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -155,35 +171,35 @@ html,body{
 	width: 84%;
 	height: 19%;
 	margin-top: 1%;
-	background-image: url(img/3/33_02.png);
+	background-image: url(img/3/333_02.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 #ltwo{
 	width: 84%;
 	height: 20%;
-	background-image: url(img/3/33_07.png);
+	background-image: url(img/3/333_07.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 #lthree{
 	width: 100%;
 	height: 20%;
-	background-image: url(img/3/33_11.png);
+	background-image: url(img/3/333_11.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 #lfour{
 	width: 84%;
 	height: 20%;
-	background-image: url(img/3/33_16.png);
+	background-image: url(img/3/333_16.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 #lfive{
 	width: 84%;
 	height: 20%;
-	background-image: url(img/3/33_22.png);
+	background-image: url(img/3/333_22.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
@@ -249,7 +265,7 @@ html,body{
 	width: 84%;
 	height: 19%;
 	margin-top: 1%;
-	background-image: url(img/3/33_04.png);
+	background-image: url(img/3/333_04.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -258,7 +274,7 @@ html,body{
 #rtwo{
 	width: 84%;
 	height: 20%;
-	background-image: url(img/3/33_08.png);
+	background-image: url(img/3/333_08.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -267,14 +283,14 @@ html,body{
 #rthree{
 	width: 100%;
 	height: 20%;
-	background-image: url(img/3/33_13.png);
+	background-image: url(img/3/333_13.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 #rfour{
 	width: 84%;
 	height: 20%;
-	background-image: url(img/3/33_19.png);
+	background-image: url(img/3/333_19.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -283,7 +299,7 @@ html,body{
 #rfive{
 	width: 84%;
 	height: 20%;
-	background-image: url(img/3/33_23.png);
+	background-image: url(img/3/333_23.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -292,7 +308,7 @@ html,body{
 
 /*轮播图css------------------------------*/
 	.focus{ width:100%; height:100%;  margin:0 auto; position:relative; overflow:hidden;   }
-	.focus .hd{ width:100%; height:11px;  position:absolute; z-index:1; bottom:10%; text-align:center;  }
+	.focus .hd{ display: none; width:100%; height:11px;  position:absolute; z-index:1; bottom:10%; text-align:center;  }
 	.focus .hd ul{ display:inline-block; height:5px; padding:3px 5px; background-color:rgba(255,255,255,0.7); 
 		-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; font-size:0; vertical-align:top;
 	}
@@ -333,6 +349,7 @@ html,body{
 	position: absolute;
 	left: 25%;
 	bottom: 0;
+	transform: scale(3,3);
 }
 .jsbottom{
 	width: 100%;
@@ -345,18 +362,19 @@ html,body{
 	position: absolute;
 	left: 26%;
 	top: 7%;
+	transform: rotateX(-90deg);
 }
 #jsi2{
 	width: 17%;
 	height: 27%;
 	position: absolute;
-	left: 31%;
+	left: -100%;
 	top: 42%;
 }
 #jsi3{
 	width: 17%;
 	height: 27%;
 	position: absolute;
-	left: 55%;
+	left: 100%;
 	top: 42%;
 }

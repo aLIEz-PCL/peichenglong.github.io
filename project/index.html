@@ -13,7 +13,10 @@
 	</head>
 	<body>
 		<main>
-			<h1>请在横屏模式下体验</h1>
+			<div>
+				<img id="one" src="img/0/1.png" alt="" /><br />
+				<img id="two" src="img/0/2.png" alt="" />
+			</div>
 		</main>
 		<!--首页封面------------------------------------------------->
 		<div class="shouye">
@@ -96,18 +99,6 @@
 		
 		window.onload = function(){
 			$(function(){
-				setTimeout(function(){
-					for( var i = 0;i<=4;i++){
-						$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
-						$(".xqright div")[i].style.backgroundImage = "url("+ array0[i] +")"
-					}
-				},500)
-				setTimeout(function(){
-					for( var i = 0;i<=4;i++){
-						$(".xqleft div")[i].style.backgroundImage = ""
-						$(".xqright div")[i].style.backgroundImage = ""
-					}
-				},5000)
 				
 				$(".shouye").css("display","block")
 				var b = document.getElementsByTagName('body')[0]
@@ -160,15 +151,15 @@
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
-					},5000)
+					},16)
 				},300)
 			})
 			
 			
 			
 			
-			var array0 = ["img/3/3_02.png","img/3/3_07.png","img/3/3_11.png","img/3/3_16.png","img/3/3_22.png"]
-			var array1 = ["img/3/3_04.png","img/3/3_08.png","img/3/3_13.png","img/3/3_19.png","img/3/3_23.png"]
+			var array0 = ["img/3/33_02.png","img/3/33_07.png","img/3/33_11.png","img/3/33_16.png","img/3/33_22.png"]
+			var array1 = ["img/3/33_04.png","img/3/33_08.png","img/3/33_13.png","img/3/33_19.png","img/3/33_23.png"]
 			var bj0 = [
 				["img/图/1-1.jpg","img/图/1-2.jpg"],
 				["img/图/2-1.jpg","img/图/2-2.jpg"],
@@ -184,9 +175,18 @@
 				["img/图/10.jpg","img/图/10.jpg"]
 			]
 			
-			
-			
-			
+			setTimeout(function(){
+				for( var i = 0;i<=4;i++){
+					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
+					$(".xqright div")[i].style.backgroundImage = "url("+ array0[i] +")"
+				}
+			},500)
+			setTimeout(function(){
+				for( var i = 0;i<=4;i++){
+					$(".xqleft div")[i].style.backgroundImage = ""
+					$(".xqright div")[i].style.backgroundImage = ""
+				}
+			},5000)
 			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
@@ -226,15 +226,48 @@
 				setTimeout(function(){
 					$(".jieshu").css("display","block")
 					.css("z-index",'200')
+					setTimeout(function(){
+						$(".jstop img").css("transform","scale(1,1)")
+						.css('transition-duration',"1s")
+					},300)
+					setTimeout(function(){
+						$("#jsi1").css("transform","rotateX(360deg)")
+						.css("transition-timing-function",'ease-in-out')
+						.css('transition-duration',"1s")
+					},1300)
+					setTimeout(function(){
+						$("#jsi2").animate({
+							left:"31%"
+						},500)
+						$("#jsi3").animate({
+							left:"55%"
+						},500) 
+					},1700) 
 				},300)
 			})
 			
 			var again = $("#jsi2")[0]
+			var share = $("#jsi3")[0]
 			again.addEventListener("touchstart",function(){
-				$(".jieshu").css('display','none')
-				$(".shouye").css("display","block")
+				$("#jsi2").css("transform","translateY(1px)")
+				.css("filter",'drop-shadow(0px -1px 2px white)')
 			})
-			
+			again.addEventListener("touchstart",function(){
+				$("#jsi2").css("transform","translateY(-1px)")
+				.css("filter",'drop-shadow(0px 0px 0px white)')
+				setTimeout(function(){
+					$(".jieshu").css('display','none')
+					$(".shouye").css("display","block")
+				},300)
+			})
+			share.addEventListener("touchstart",function(){
+				$("#jsi3").css("transform","translateY(1px)")
+				.css("filter",'drop-shadow(0px -1px 2px white)')
+			})
+			share.addEventListener("touchend",function(){
+				$("#jsi3").css("transform","translateY(-1px)")
+				.css("filter",'drop-shadow(0px 0px 0px white)')
+			})
 			
 			TouchSlide({ 
 				slideCell:"#focus",
