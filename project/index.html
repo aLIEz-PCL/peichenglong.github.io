@@ -154,9 +154,6 @@
 				},300)
 			})
 			
-			
-			
-			
 			var array0 = ["img/3/33_02.png","img/3/33_07.png","img/3/33_11.png","img/3/33_16.png","img/3/33_22.png"]
 			var array1 = ["img/3/33_04.png","img/3/33_08.png","img/3/33_13.png","img/3/33_19.png","img/3/33_23.png"]
 			var bj0 = [
@@ -174,18 +171,18 @@
 				["img/图/10.jpg","img/图/10.jpg"]
 			]
 			
-//			setTimeout(function(){
-//				for( var i = 0;i<=4;i++){
-//					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
-//					$(".xqright div")[i].style.backgroundImage = "url("+ array1[i] +")"
-//				}
-//			},500)
-//			setTimeout(function(){
-//				for( var i = 0;i<=4;i++){
-//					$(".xqleft div")[i].style.backgroundImage = ""
-//					$(".xqright div")[i].style.backgroundImage = ""
-//				}
-//			},5000)
+			setTimeout(function(){
+				for( var i = 0;i<=4;i++){
+					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
+					$(".xqright div")[i].style.backgroundImage = "url("+ array1[i] +")"
+				}
+			},500)
+			setTimeout(function(){
+				for( var i = 0;i<=4;i++){
+					$(".xqleft div")[i].style.backgroundImage = ""
+					$(".xqright div")[i].style.backgroundImage = ""
+				}
+			},5000)
 			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
@@ -228,12 +225,12 @@
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
-					},300)
+					})
 					setTimeout(function(){
 						$("#jsi1").css("transform","rotateX(360deg)")
 						.css("transition-timing-function",'ease-in-out')
 						.css('transition-duration',"1s")
-					},1300)
+					},1000)
 					setTimeout(function(){
 						$("#jsi2").animate({
 							left:"31%"
@@ -241,7 +238,7 @@
 						$("#jsi3").animate({
 							left:"55%"
 						},500) 
-					},1700) 
+					},1400) 
 				},300)
 			})
 			
