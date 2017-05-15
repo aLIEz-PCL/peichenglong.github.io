@@ -38,15 +38,15 @@ main div{
 }
 main div #one{
 	display: block;
-	width: 50%;
-	height: 50%;
+	width: 25%;
+	height: 25%;
 	margin: 0 auto;
 }
 main div #two{
 	display: block;
-	width: 100%;
-	height: 40%;
-	margin: 0 auto;
+	width: 60%;
+	height: 20%;
+	margin: 20% auto;
 }
 /*首页封面--------------------------------*/
 .shouye{
@@ -308,8 +308,9 @@ main div #two{
 }
 .xqcenter .up{
 	position: absolute;
-	bottom: -1%;
+	bottom: 0%;
 	width:40%;
+	height: 10%;
 	left: 24%;
 }
  .up img{
@@ -368,7 +369,7 @@ main div #two{
 	height: 70%;
 	position: absolute;
 	left: 25%;
-	bottom: 0;
+	bottom: 7%;
 	transform: scale(3,3);
 }
 .jsbottom{
