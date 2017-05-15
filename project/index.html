@@ -102,6 +102,9 @@
 				    if(orientChk =='landscape'){  
 				        //这里是横屏下需要执行的事件
 				        $("main").css("display","none")
+				        window.addEventListener("touchstart",function(){
+				        	$("main").css("display","none")
+				        })
 				        b.style.margin= '0';
 						b.style.padding= '0';
 						b.style.width='100%';
@@ -110,6 +113,9 @@
 				    }else{  
 				        //这里是竖屏下需要执行的事件
 				        if(document.documentElement.clientWidth < document.documentElement.clientHeight){
+				        	window.addEventListener("touchstart",function(){
+					        	$("main").css("display","flex")
+					        })
 				        	$("main").css("position","absolute")
 					        $('main').css('z-index','300')
 					        $("main").css("display","flex")
