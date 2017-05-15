@@ -308,9 +308,9 @@ main div #two{
 }
 .xqcenter .up{
 	position: absolute;
-	bottom: -2%;
-	width:41%;
-	left: 23%;
+	bottom: -1%;
+	width:40%;
+	left: 24%;
 }
  .up img{
  	width: 100%;
@@ -377,10 +377,10 @@ main div #two{
 	position: relative;
 }
 #jsi1{
-	width: 44%;
+	width: 42%;
 	height: 16%;
 	position: absolute;
-	left: 29%;
+	left: 30%;
 	top: 7%;
 	transform: rotateX(-90deg);
 }
