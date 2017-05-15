@@ -149,7 +149,63 @@
 					},3000)
 				},300)
 			})
-				
+			
+			
+			
+			function preloadImage1(array0)
+		    {
+		        if (array0 && array0 instanceof Array)
+		        {
+		            for (var index=0; index<array0.length; index++)
+		            {
+		                var img = new Image();
+		                img.src = array0[index];
+		            }
+		        }
+		    }
+		    function preloadImage1(array1)
+		    {
+		        if (array1 && array1 instanceof Array)
+		        {
+		            for (var index=0; index<array1.length; index++)
+		            {
+		                var img = new Image();
+		                img.src = array1[index];
+		            }
+		        }
+		    }
+		    preloadImage1(array0);
+		    preloadImage1(array1);
+			
+			function preloadImage2(bj0)
+		    {
+		        if (bj0 && bj0 instanceof Array)
+		        {
+		            for (var index=0; index<bj0.length; index++)
+		            {
+		                for (var x = 0; x<bj0[index].length; x++){
+		                	var img = new Image();
+		                	img.src = bj0[index][x];
+		                }
+		            }
+		        }
+		    }
+		    function preloadImage2(bj1)
+		    {
+		        if (bj1 && bj1 instanceof Array)
+		        {
+		            for (var index=0; index<bj1.length; index++)
+		            {
+		                for (var x = 0; x<bj1[index].length; x++){
+		                	var img = new Image();
+		                	img.src = bj1[index][x];
+		                	console.log(img)
+		                }
+		            }
+		        }
+		    }
+			preloadImage2(bj0);
+			preloadImage2(bj1);
 			
 			var array0 = ["img/3/3_02.png","img/3/3_07.png","img/3/3_11.png","img/3/3_16.png","img/3/3_22.png"]
 			var array1 = ["img/3/3_04.png","img/3/3_08.png","img/3/3_13.png","img/3/3_19.png","img/3/3_23.png"]
@@ -167,6 +223,10 @@
 				["img/图/9-1.jpg","img/图/9-2.jpg"],
 				["img/图/10.jpg","img/图/10.jpg"]
 			]
+			
+			
+			
+			
 			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
