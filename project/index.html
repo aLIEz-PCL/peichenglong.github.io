@@ -99,6 +99,7 @@
 				<img id="jsi2" src="img/底/images/底_11.png" alt="" />
 				<img id="jsi3" src="img/底/images/底_13.png" alt="" />
 			</div>
+			<div class="share"></div>
 		</div>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
@@ -334,6 +335,7 @@
 			
 			var again = $("#jsi2")[0]
 			var share = $("#jsi3")[0]
+			var sh = $(".share")[0]
 			again.addEventListener("touchstart",function(){
 				$("#jsi2").css("transform","translateY(1px)")
 				.css("filter",'drop-shadow(0px -1px 2px white)')
@@ -353,7 +355,12 @@
 			share.addEventListener("touchend",function(){
 				$("#jsi3").css("transform","translateY(-1px)")
 				.css("filter",'drop-shadow(0px 0px 0px white)')
+				$(".share").css("display",'block')
 			})
+			sh.addEventListener("touchstart",function(){
+				$(".share").css("display",'none')
+			})
+			
 			var slider = new TouchSlide()
 			TouchSlide({ 
 				slideCell:"#focus",
@@ -366,10 +373,7 @@
 				switchLoad:"_src"//切换加载，真实图片路径为"_src"
 			});
 				
-			var share = $("#jsi3")[0]
-			share.addEventListener("touchstart",function(){
-				
-			})
+			
 				
 				
 				
