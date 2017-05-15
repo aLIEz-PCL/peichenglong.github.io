@@ -210,18 +210,6 @@
 				["img/图/10.jpg","img/图/10.jpg"]
 			]
 			
-			setTimeout(function(){
-				for( var i = 0;i<=4;i++){
-					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
-					$(".xqright div")[i].style.backgroundImage = "url("+ array1[i] +")"
-				}
-			},500)
-			setTimeout(function(){
-				for( var i = 0;i<=4;i++){
-					$(".xqleft div")[i].style.backgroundImage = ""
-					$(".xqright div")[i].style.backgroundImage = ""
-				}
-			},5000)
 			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
@@ -264,7 +252,7 @@
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
-					})
+					},100)
 					setTimeout(function(){
 						$("#jsi1").css("transform","rotateX(360deg)")
 						.css("transition-timing-function",'ease-in-out')
