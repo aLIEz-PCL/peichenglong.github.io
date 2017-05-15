@@ -99,7 +99,6 @@
 		
 		window.onload = function(){
 			$(function(){
-				
 				$(".shouye").css("display","block")
 				var b = document.getElementsByTagName('body')[0]
 				function orientInit(){
@@ -151,7 +150,7 @@
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
-					},16)
+					},5000)
 				},300)
 			})
 			
@@ -175,18 +174,18 @@
 				["img/图/10.jpg","img/图/10.jpg"]
 			]
 			
-			setTimeout(function(){
-				for( var i = 0;i<=4;i++){
-					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
-					$(".xqright div")[i].style.backgroundImage = "url("+ array1[i] +")"
-				}
-			},500)
-			setTimeout(function(){
-				for( var i = 0;i<=4;i++){
-					$(".xqleft div")[i].style.backgroundImage = ""
-					$(".xqright div")[i].style.backgroundImage = ""
-				}
-			},5000)
+//			setTimeout(function(){
+//				for( var i = 0;i<=4;i++){
+//					$(".xqleft div")[i].style.backgroundImage = "url("+ array0[i] +")"
+//					$(".xqright div")[i].style.backgroundImage = "url("+ array1[i] +")"
+//				}
+//			},500)
+//			setTimeout(function(){
+//				for( var i = 0;i<=4;i++){
+//					$(".xqleft div")[i].style.backgroundImage = ""
+//					$(".xqright div")[i].style.backgroundImage = ""
+//				}
+//			},5000)
 			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
