@@ -103,13 +103,13 @@
 			</div>
 		</div>
 		<!--语音元素-->
-		<audio class="audio1" src="audio/bj.mp3"></audio>
-		<audio class="audio2" src="audio/begin.mp3"></audio>
-		<audio class="click" src="audio/click.mp3"></audio>
-		<audio class="zhen" src="audio/zhen.mp3"></audio>
-		<audio class="victory" src="audio/victory.mp3"></audio>
-		<audio class="jsbj" src="audio/jsbj.mp3"></audio>
-		<audio class="avchange" src="audio/click.mp3"></audio>
+		<audio class="audio1" src="audio/bj.mp3" type="audio/mpeg"></audio>
+		<audio class="audio2" src="audio/begin.mp3" type="audio/mpeg"></audio>
+<!--		<audio class="click" src="audio/click.mp3" type="audio/mpeg"></audio>-->
+		<audio class="zhen" src="audio/zhen.mp3" type="audio/mpeg"></audio>
+		<audio class="victory" src="audio/victory.mp3" type="audio/mpeg"></audio>
+		<audio class="jsbj" src="audio/jsbj.mp3" type="audio/mpeg"></audio>
+		<audio class="avchange" src="audio/click.mp3" type="audio/mpeg"></audio>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
@@ -138,16 +138,16 @@
 		window.onload = function(){
 			$(function(){
 					var zhen = $(".zhen")[0]
-                    var click = $(".click")[0]
-                	window.addEventListener("touchstart",function(){
-                		click.src = "audio/click.mp3"
-                		click.volume = 0.3
-                		click.play()
-                	})
-                	var xiangqing = $(".xiangqing")[0]
-                	xiangqing.addEventListener("touchstart",function(){
-                		click.src = ''
-                	})
+//                  var click = $(".click")[0]
+//              	window.addEventListener("touchstart",function(){
+//              		click.src = "audio/click.mp3"
+//              		click.volume = 0.3
+//              		click.play()
+//              	})
+//              	var xiangqing = $(".xiangqing")[0]
+//              	xiangqing.addEventListener("touchstart",function(){
+//              		click.src = ''
+//              	})
 					var imgattr = new Array()
 					    $('body').append(zhezhao1);
 					    imgattr = [
