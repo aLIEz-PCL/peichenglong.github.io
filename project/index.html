@@ -136,84 +136,84 @@
         }
         var c = setInterval(changeFont,1200)
 		window.onload = function(){
-					var zhen = $(".zhen")[0]
-//                  var click = $(".click")[0]
-//              	window.addEventListener("touchstart",function(){
-//              		click.src = "audio/click.mp3"
-//              		click.volume = 0.3
-//              		click.play()
-//              	})
-//              	var xiangqing = $(".xiangqing")[0]
-//              	xiangqing.addEventListener("touchstart",function(){
-//              		click.src = ''
-//              	})
-					var avattr = new Array()
-						avattr = [
-							"audio/bj.mp3","audio/begin.mp3","audio/victory.mp3",
-					    	"audio/click.mp3","audio/jsbj.mp3","audio/zhen.mp3",
-					    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
-					    	"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
-						]
-					var imgattr = new Array()
-					    $('body').append(zhezhao1);
-					    imgattr = [
-					    	"img/封面/11.jpg","img/2/22.jpg","img/图/1-1.jpg","img/底/底.jpg",
-					        "img/3/33_02.png","img/3/33_07.png","img/3/33_11.png","img/3/33_16.png","img/3/33_22.png",
-					        "img/3/33_04.png","img/3/33_08.png","img/3/33_13.png","img/3/33_19.png","img/3/33_23.png",
-					        "img/图/1-1.jpg","img/图/1-2.jpg","img/图/1-3.jpg",
-							"img/图/2-1.jpg","img/图/2-2.jpg","img/图/2-3.jpg",
-							"img/图/3-1.jpg","img/图/3-2.jpg","img/图/3-3.jpg","img/图/3-4.jpg",
-							"img/图/4-1.jpg","img/图/4-2.jpg","img/图/4-3.jpg","img/图/4-4.jpg","img/图/4-5.jpg",
-							"img/图/5-1.jpg","img/图/5-2.jpg",
-							"img/图/6-1.jpg","img/图/6-2.jpg",
-							"img/图/7-1.jpg",
-							"img/图/8-1.jpg","img/图/8-2.jpg",
-							"img/图/9-1.jpg","img/图/9-2.jpg","img/图/9-3.jpg",
-							"img/图/10-1.jpg","img/图/10-2.jpg",
-							"img/字/1.png","img/字/2.png","img/字/3.png","img/字/4.png","img/字/5.png",
-							"img/字/6.png","img/字/7.png","img/字/8.png","img/字/9.png","img/字/10.png"
-					    ];
-					    //这里用了一个递归函数
-					    lodingpo();
-					    var audio1 = $(".audio1")[0]
-					    var m = false
-					    var n = false
-					    function lodingpo(){
-					        for(var i=0;i<imgattr.length;i++){
-					        	imgobj = new Image();
-					        	imgobj.src=imgattr[i];
-					        }
+			var zhen = $(".zhen")[0]
+//              var click = $(".click")[0]
+//          	window.addEventListener("touchstart",function(){
+//          		click.src = "audio/click.mp3"
+//          		click.volume = 0.3
+//          		click.play()
+//          	})
+//          	var xiangqing = $(".xiangqing")[0]
+//          	xiangqing.addEventListener("touchstart",function(){
+//          		click.src = ''
+//          	})
+			var avattr = new Array()
+				avattr = [
+					"audio/bj.mp3","audio/begin.mp3","audio/victory.mp3",
+			    	"audio/click.mp3","audio/jsbj.mp3","audio/zhen.mp3",
+			    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
+			    	"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
+				]
+			var imgattr = new Array()
+			    $('body').append(zhezhao1);
+			    imgattr = [
+			    	"img/封面/11.jpg","img/2/22.jpg","img/图/1-1.jpg","img/底/底.jpg",
+			        "img/3/33_02.png","img/3/33_07.png","img/3/33_11.png","img/3/33_16.png","img/3/33_22.png",
+			        "img/3/33_04.png","img/3/33_08.png","img/3/33_13.png","img/3/33_19.png","img/3/33_23.png",
+			        "img/图/1-1.jpg","img/图/1-2.jpg","img/图/1-3.jpg",
+					"img/图/2-1.jpg","img/图/2-2.jpg","img/图/2-3.jpg",
+					"img/图/3-1.jpg","img/图/3-2.jpg","img/图/3-3.jpg","img/图/3-4.jpg",
+					"img/图/4-1.jpg","img/图/4-2.jpg","img/图/4-3.jpg","img/图/4-4.jpg","img/图/4-5.jpg",
+					"img/图/5-1.jpg","img/图/5-2.jpg",
+					"img/图/6-1.jpg","img/图/6-2.jpg",
+					"img/图/7-1.jpg",
+					"img/图/8-1.jpg","img/图/8-2.jpg",
+					"img/图/9-1.jpg","img/图/9-2.jpg","img/图/9-3.jpg",
+					"img/图/10-1.jpg","img/图/10-2.jpg",
+					"img/字/1.png","img/字/2.png","img/字/3.png","img/字/4.png","img/字/5.png",
+					"img/字/6.png","img/字/7.png","img/字/8.png","img/字/9.png","img/字/10.png"
+			    ];
+			    //这里用了一个递归函数
+			    lodingpo();
+			    var audio1 = $(".audio1")[0]
+			    var m = false
+			    var n = false
+			    function lodingpo(){
+			        for(var i=0;i<imgattr.length;i++){
+			        	imgobj = new Image();
+			        	imgobj.src=imgattr[i];
+			        }
 //					        for(var i=0;i<avattr.length;i++){
 //					        	avobj = new Audio();
 //					        	avobj.src = avattr[i];
 //					        }
-					        imgobj.onload = function(){
+			        imgobj.onload = function(){
 //					        	m = true
+						setTimeout(function(){
+			        		clearInterval(c)
+			        		$('.zhezhao1').remove();
+			         		$(".shouye").css("display","block")
+			         		audio1.src = "audio/bj.mp3"
+			         		audio1.volume = 0.5
+			         		audio1.play()
+			         		setTimeout(function(){
+								$(".sycenter img").css("transform","scale(1,1)")
+								.css('transition-duration',"1s")
 								setTimeout(function(){
-					        		clearInterval(c)
-					        		$('.zhezhao1').remove();
-					         		$(".shouye").css("display","block")
-					         		audio1.src = "audio/bj.mp3"
-					         		audio1.volume = 0.5
-					         		audio1.play()
-					         		setTimeout(function(){
-										$(".sycenter img").css("transform","scale(1,1)")
-										.css('transition-duration',"1s")
-										setTimeout(function(){
-											zhen.src = "audio/zhen.mp3"
-											zhen.play()
-										},800)
-									},17)
-					        	},17)
-					        }
+									zhen.src = "audio/zhen.mp3"
+									zhen.play()
+								},800)
+							},17)
+			        	},17)
+			        }
 //					        avobj.onload = function(){
 //					        	n = true
 //					        }
 //					        if(m == true && n == true){
 //					        	
 //					        }
-					    }
-				
+			    }
+		
 				
 				
 				
