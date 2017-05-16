@@ -109,7 +109,7 @@
 		<audio class="zhen" src="audio/zhen.mp3"></audio>
 		<audio class="victory" src="audio/victory.mp3"></audio>
 		<audio class="jsbj" src="audio/jsbj.mp3"></audio>
-		<audio class="avchange" src=""></audio>
+		<audio class="avchange" src="audio/click.mp3"></audio>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
@@ -137,7 +137,6 @@
         var c = setInterval(changeFont,1200)
 		window.onload = function(){
 			$(function(){
-				
 					var zhen = $(".zhen")[0]
                     var click = $(".click")[0]
                 	window.addEventListener("touchstart",function(){
@@ -148,6 +147,7 @@
 					var imgattr = new Array()
 					    $('body').append(zhezhao1);
 					    imgattr = [
+					    	"img/封面/11.jpg","img/2/22.jpg","img/图/1-1.jpg","img/底/底.jpg",
 					    	"audio/bj.mp3","audio/begin.mp3","audio/victory.mp3",
 					    	"audio/click.mp3","audio/jsbj.mp3","audio/zhen.mp3",
 					    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
