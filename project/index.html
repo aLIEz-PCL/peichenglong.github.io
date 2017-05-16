@@ -195,24 +195,20 @@
 						setTimeout(function(){
 			        		clearInterval(c)
 			        		$('.zhezhao1').remove();
-			         		$(".shouye").css("display","block")
-			         		document.addEventListener("WeixinJSBridgeReady", function () { 
+			         		$(".shouye").css("display","block") 
     							audio1.play()
 				         		audio1.src = "audio/bj.mp3"
 				         		audio1.volume = 0.5
 				         		audio1.play()
-			         		}, false);
 			         		
 			         		setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
-								.css('transition-duration',"1s")
-								document.addEventListener("WeixinJSBridgeReady", function () { 
+								.css('transition-duration',"1s") 
 									setTimeout(function(){
 										zhen.play()
 										zhen.src = "audio/zhen.mp3"
 										zhen.play()
 									},800)
-								},false)
 							},17)
 			        	},17)
 			       }
