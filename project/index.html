@@ -194,15 +194,16 @@
 //			        }
 			        imgobj.onload = function(){
 			        	$(".shouye").css("display","none")
+			        	clearInterval(c)
+		        		$(".font").text("点击开始")
 			       }
 			    }
 				window.addEventListener("touchstart",function(){
 					setTimeout(function(){
-		        		clearInterval(c)
 		        		$('.zhezhao1').remove();
 		         		$(".shouye").css("display","block")
 			            audio1.play()
-				 		audio1.src = "audio/bj.mp3"
+				 		audio1.src = "audio/jsbj.mp3"
 				 		audio1.volume = 0.5
 				 		audio1.play()
 							
