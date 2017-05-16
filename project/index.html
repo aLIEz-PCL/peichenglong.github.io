@@ -196,21 +196,19 @@
 						setTimeout(function(){
 			        		clearInterval(c)
 			        		$('.zhezhao1').remove();
-			         		$(".shouye").css("display","block") 
-    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-        WeixinJSBridge.invoke('getNetworkType', {}, function (res) {
-            audio1.play()
-	 		audio1.src = "audio/bj.mp3"
-	 		audio1.volume = 0.5
-	 		audio1.play()
-        });
-    }
+			         		$(".shouye").css("display","block")
+			         		$("#audio1").attr("autoplay","autoplay")
+				            audio1.play()
+					 		audio1.src = "audio/bj.mp3"
+					 		audio1.volume = 0.5
+					 		audio1.play()
     							
 			         		
 			         		setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
 								.css('transition-duration',"1s") 
 									setTimeout(function(){
+										$("#zhen").attr("autoplay","autoplay")
 										zhen.play()
 										zhen.src = "audio/zhen.mp3"
 										zhen.play()
@@ -390,9 +388,11 @@
 					$(".jieshu").css("display","block")
 					.css("z-index",'200')
 					avchange.load()
+					$("#victory").attr("autoplay","autoplay")
 					victory.play()
 					victory.src = "audio/victory.mp3"
 					victory.play()
+					$("#jsbj").attr("autoplay","autoplay")
 					jsbj.play()
 					jsbj.src = "audio/jsbj.mp3"
 					jsbj.play()
