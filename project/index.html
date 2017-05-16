@@ -202,13 +202,14 @@
 			         		setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
 								.css('transition-duration',"1s")
-								document.addEventListener("WeixinJSBridgeReady", function () { 
-									setTimeout(function(){
+								setTimeout(function(){
+									document.addEventListener("WeixinJSBridgeReady", function () { 
 										document.getElementById("zhen").play()
 										document.getElementById("zhen").src = "audio/zhen.mp3"
 										document.getElementById("zhen").play()
-									},800)
-								},false)
+									},false)
+								},800)
+								
 							},17)
 			        	},17)
 			       }
@@ -250,6 +251,7 @@
 			},false)
 			
 			
+			console.log()
 			
 			var begin = $(".sybottom #img2")[0]
 			begin.addEventListener("touchstart",function(){
@@ -277,11 +279,13 @@
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
-						document.addEventListener("WeixinJSBridgeReady", function () { 
-							setTimeout(function(){
+						setTimeout(function(){
+							document.addEventListener("WeixinJSBridgeReady", function () { 
+							
 								document.getElementById("audio1").load()
-							},17)
-						},false)
+								console.log(document.getElementById("audio1"))
+							},false)
+						},17)
 					},5000)
 				},300)
 			})
@@ -447,13 +451,13 @@
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
-						document.addEventListener("WeixinJSBridgeReady", function () { 
-							setTimeout(function(){
+						setTimeout(function(){
+							document.addEventListener("WeixinJSBridgeReady", function () { 
 								document.getElementById("zhen").play()
 								document.getElementById("zhen").src = "audio/zhen.mp3"
 								document.getElementById("zhen").play()
-							},800)
-						},false)
+							},false)
+						},800)
 					},16)
 				},300)
 			})
