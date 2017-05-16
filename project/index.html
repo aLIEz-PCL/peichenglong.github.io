@@ -148,12 +148,12 @@
 //          		click.src = ''
 //          	})
 			var imgattr = new Array()
-			var avattr = new Array()
+//			var avattr = new Array()
 			    $('body').append(zhezhao1);
-			    avattr = [
-			    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
-					"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
-			    ]
+//			    avattr = [ 
+//			    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
+//					"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
+//			    ]
 			    imgattr = [
 			    	"img/封面/11.jpg","img/2/22.jpg","img/图/1-1.jpg","img/底/底.jpg",
 			        "img/3/33_02.png","img/3/33_07.png","img/3/33_11.png","img/3/33_16.png","img/3/33_22.png",
@@ -181,10 +181,10 @@
 			        	imgobj = new Image();
 			        	imgobj.src=imgattr[i];
 			        }
-			        for(var i=0;i<avattr.length;i++){
-			        	avobj = new Audio();
-			        	avobj.src = avattr[i];
-			        }
+//			        for(var i=0;i<avattr.length;i++){
+//			        	avobj = new Audio();
+//			        	avobj.src = avattr[i];
+//			        }
 			        imgobj.onload = function(){
 						setTimeout(function(){
 			        		clearInterval(c)
