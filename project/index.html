@@ -103,13 +103,13 @@
 			</div>
 		</div>
 		<!--语音元素-->
-		<audio class="audio1" src="audio/bj.mp3" type="audio/mpeg"></audio>
-		<audio class="audio2" src="audio/begin.mp3" type="audio/mpeg"></audio>
+		<audio class="audio1" src="audio/bj.mp3" type="audio/mpeg" preload="load"></audio>
+		<audio class="audio2" src="audio/begin.mp3" type="audio/mpeg" preload="load"></audio>
 <!--		<audio class="click" src="audio/click.mp3" type="audio/mpeg"></audio>-->
-		<audio class="zhen" src="audio/zhen.mp3" type="audio/mpeg"></audio>
-		<audio class="victory" src="audio/victory.mp3" type="audio/mpeg"></audio>
-		<audio class="jsbj" src="audio/jsbj.mp3" type="audio/mpeg"></audio>
-		<audio class="avchange" src="audio/click.mp3" type="audio/mpeg"></audio>
+		<audio class="zhen" src="audio/zhen.mp3" type="audio/mpeg" preload="load"></audio>
+		<audio class="victory" src="audio/victory.mp3" type="audio/mpeg" preload="load"></audio>
+		<audio class="jsbj" src="audio/jsbj.mp3" type="audio/mpeg" preload="load"></audio>
+		<audio class="avchange" src="audio/click.mp3" type="audio/mpeg" preload="load"></audio>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
@@ -136,7 +136,6 @@
         }
         var c = setInterval(changeFont,1200)
 		window.onload = function(){
-			$(function(){
 					var zhen = $(".zhen")[0]
 //                  var click = $(".click")[0]
 //              	window.addEventListener("touchstart",function(){
@@ -148,14 +147,17 @@
 //              	xiangqing.addEventListener("touchstart",function(){
 //              		click.src = ''
 //              	})
+					var avattr = new Array()
+						avattr = [
+							"audio/bj.mp3","audio/begin.mp3","audio/victory.mp3",
+					    	"audio/click.mp3","audio/jsbj.mp3","audio/zhen.mp3",
+					    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
+					    	"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
+						]
 					var imgattr = new Array()
 					    $('body').append(zhezhao1);
 					    imgattr = [
 					    	"img/封面/11.jpg","img/2/22.jpg","img/图/1-1.jpg","img/底/底.jpg",
-					    	"audio/bj.mp3","audio/begin.mp3","audio/victory.mp3",
-					    	"audio/click.mp3","audio/jsbj.mp3","audio/zhen.mp3",
-					    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
-					    	"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3",
 					        "img/3/33_02.png","img/3/33_07.png","img/3/33_11.png","img/3/33_16.png","img/3/33_22.png",
 					        "img/3/33_04.png","img/3/33_08.png","img/3/33_13.png","img/3/33_19.png","img/3/33_23.png",
 					        "img/图/1-1.jpg","img/图/1-2.jpg","img/图/1-3.jpg",
@@ -174,13 +176,20 @@
 					    //这里用了一个递归函数
 					    lodingpo();
 					    var audio1 = $(".audio1")[0]
+					    var m = false
+					    var n = false
 					    function lodingpo(){
 					        for(var i=0;i<imgattr.length;i++){
 					        	imgobj = new Image();
 					        	imgobj.src=imgattr[i];
 					        }
+					        for(var i=0;i<avattr.length;i++){
+					        	avobj = new Audio();
+					        	avobj.src = avattr[i];
+					        }
 					        imgobj.onload = function(){
-					        	setTimeout(function(){
+//					        	m = true
+								setTimeout(function(){
 					        		clearInterval(c)
 					        		$('.zhezhao1').remove();
 					         		$(".shouye").css("display","block")
@@ -195,6 +204,12 @@
 									},17)
 					        	},17)
 					        }
+//					        avobj.onload = function(){
+//					        	n = true
+//					        }
+//					        if(m == true && n == true){
+//					        	
+//					        }
 					    }
 				
 				
@@ -218,15 +233,15 @@
 				    }else{  
 				        //这里是竖屏下需要执行的事件
 				        if(document.documentElement.clientWidth < document.documentElement.clientHeight){
-				        	window.addEventListener("touchstart",function(){
-					        	$("main").css("display","flex")
-					        })
-				        	$("main").css("position","absolute")
-					        $('main').css('z-index','300')
-					        $("main").css("display","flex")
+//				        	window.addEventListener("touchstart",function(){
+//					        	$("main").css("display","flex")
+//					        })
+//				        	$("main").css("position","absolute")
+//					        $('main').css('z-index','300')
+//					        $("main").css("display","flex")
 				        }
 				    }  
-				}    
+				}
 				orientInit();
 			window.addEventListener('onorientationchange' in window?'orientationchange':'resize', function(){  
 		    	setTimeout(orientInit, 100);  
@@ -444,7 +459,6 @@
 				
 				
 				
-			})
 		}
 	</script>
 </html>
