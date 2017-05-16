@@ -121,7 +121,6 @@
             zhezhao1 +="</div>";
         
         
-        var zz = $(".zhezhao1")[0]
         function changeFont(){
         	setTimeout(function(){
         		$(".font").text("LOADING")
@@ -200,6 +199,8 @@
 		        		$(".font").text("点击开始")
 			       }
 			    }
+			    
+			    var zz = $(".zhezhao1")[0]
 				zz.addEventListener("touchstart",function(){
 					setTimeout(function(){
 		        		$('.zhezhao1').remove();
