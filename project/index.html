@@ -113,9 +113,7 @@
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script>
-		
 		var zhezhao1 = "<div class='zhezhao1' style='width:100%;height:100%; position:fixed; top: 0; left: 0; z-index:2999;'>";
             zhezhao1 += "<div class='zhezhaobg' style='width:100%;height:100%; background-color:#000000;opacity:0.8;'><\/div>";
             zhezhao1 += "<div class='font' style='position:absolute;top:0;bottom:0;left:0;right:0; margin:auto; width:3rem;height:1rem; font-size:1rem; color:#ffcb99;'>LOADING...<\/div>"
@@ -128,7 +126,7 @@
         	setTimeout(function(){
         		$(".font").text("LOADING.")
         	},300)
-        	setTimeout(function(){
+        	setTimeout(function(){ 
         		$(".font").text("LOADING..")
         	},600)
         	setTimeout(function(){
@@ -137,6 +135,12 @@
         }
         var c = setInterval(changeFont,1200)
 		window.onload = function(){
+			var audio1 = document.getElementById("audio1")
+			var audio2 = document.getElementById("audio2")
+			var zhen = document.getElementById("zhen")
+			var victory = document.getElementById("victory")
+			var jsbj = document.getElementById("jsbj")
+			var avchange = document.getElementById("avchange")
 //              var click = $(".click")[0]
 //          	window.addEventListener("touchstart",function(){
 //          		click.src = "audio/click.mp3"
@@ -175,7 +179,7 @@
 			    ];
 			    //这里用了一个递归函数
 			    lodingpo();
-			    
+			    var audio1 = document.getElementById("audio1")
 			    var m = false
 			    var n = false
 			    function lodingpo(){
@@ -193,23 +197,22 @@
 			        		$('.zhezhao1').remove();
 			         		$(".shouye").css("display","block")
 			         		document.addEventListener("WeixinJSBridgeReady", function () { 
-    							document.getElementById("audio1").play()
-				         		document.getElementById("audio1").src = "audio/bj.mp3"
-				         		document.getElementById("audio1").volume = 0.5
-				         		document.getElementById("audio1").play()
+    							audio1.play()
+				         		audio1.src = "audio/bj.mp3"
+				         		audio1.volume = 0.5
+				         		audio1.play()
 			         		}, false);
 			         		
 			         		setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
 								.css('transition-duration',"1s")
-								setTimeout(function(){
-									document.addEventListener("WeixinJSBridgeReady", function () { 
-										document.getElementById("zhen").play()
-										document.getElementById("zhen").src = "audio/zhen.mp3"
-										document.getElementById("zhen").play()
-									},false)
-								},800)
-								
+								document.addEventListener("WeixinJSBridgeReady", function () { 
+									setTimeout(function(){
+										zhen.play()
+										zhen.src = "audio/zhen.mp3"
+										zhen.play()
+									},800)
+								},false)
 							},17)
 			        	},17)
 			       }
@@ -251,27 +254,23 @@
 			},false)
 			
 			
-			console.log()
 			
 			var begin = $(".sybottom #img2")[0]
+			var audio2 = document.getElementById("audio2")
 			begin.addEventListener("touchstart",function(){
 				$(".sybottom #img2").css("transform","translateY(1px)")
 				.css("filter",'drop-shadow(0px -1px 2px gold)')
 				$(".xiangqing").css("opacity",'1')
-				document.addEventListener("WeixinJSBridgeReady", function () { 
-					document.getElementById("audio2").play()
-					document.getElementById("audio2").src = "audio/begin.mp3"
-					document.getElementById("audio2").play()
-				},false)
+				audio2.play()
+				audio2.src = "audio/begin.mp3"
+				audio2.play()
 			})
 			begin.addEventListener("touchend",function(){
 				$(".sybottom #img2").css("transform","translateY(-1px)")
 				.css("filter",'drop-shadow(0px 0px 0px gold)')
 				setTimeout(function(){
-					document.addEventListener("WeixinJSBridgeReady", function () { 
-						document.getElementById("zhen").load()
-						document.getElementById("audio2").load()
-					},false)
+					zhen.load()
+					audio2.load()
 					$('.shouye').css("display","none")
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(3,3)")
@@ -280,11 +279,7 @@
 					setTimeout(function(){
 						$(".vs").css("display",'none')
 						setTimeout(function(){
-							document.addEventListener("WeixinJSBridgeReady", function () { 
-							
-								document.getElementById("audio1").load()
-								console.log(document.getElementById("audio1"))
-							},false)
+							audio1.load()
 						},17)
 					},5000)
 				},300)
@@ -314,6 +309,7 @@
 			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
+			var avchange = document.getElementById("avchange")
 			xqleft.addEventListener("touchstart",function(e){
 				$("#tishi").css("display","none")
 				$(".xqleft").css("opacity",'1')
@@ -329,11 +325,9 @@
 				$("#i3")[0].src = bj0[i][3]
 				$("#i4")[0].src = bj0[i][4]
 				$(".message img")[0].src = intro1[i]
-				document.addEventListener("WeixinJSBridgeReady", function () { 
-					document.getElementById("avchange").play()
-					document.getElementById("avchange").src = av1[i]
-					document.getElementById("avchange").play()
-				},false)
+				avchange.play()
+				avchange.src = av1[i]
+				avchange.play()
 			},false)
 			xqright.addEventListener("touchstart",function(e){
 				$("#tishi").css("display","none")
@@ -350,11 +344,9 @@
 				$("#i3")[0].src = bj1[i][3]
 				$("#i4")[0].src = bj1[i][4]
 				$(".message img")[0].src = intro2[i]
-				document.addEventListener("WeixinJSBridgeReady", function () { 
-					document.getElementById("avchange").play()
-					document.getElementById("avchange").src = av2[i]
-					document.getElementById("avchange").play()
-				},false)
+				avchange.play()
+				avchange.src = av2[i]
+				avchange.play()
 			},false)
 			
 			var up = $(".up")[0]
@@ -382,6 +374,8 @@
 				
 			})
 			
+			var victory = document.getElementById("victory")
+			var jsbj = document.getElementById("jsbj")
 			var stop = $("#stop")[0]
 			stop.addEventListener("touchstart",function(){
 				$("#stop").css("transform","translateY(1px)")
@@ -393,15 +387,13 @@
 				setTimeout(function(){
 					$(".jieshu").css("display","block")
 					.css("z-index",'200')
-					document.addEventListener("WeixinJSBridgeReady", function () { 
-						document.getElementById("avchange").load()
-						document.getElementById("victory").play()
-						document.getElementById("victory").src = "audio/victory.mp3"
-						document.getElementById("victory").play()
-						document.getElementById("jsbj").play()
-						document.getElementById("jsbj").src = "audio/jsbj.mp3"
-						document.getElementById("jsbj").play()
-					},false)
+					avchange.load()
+					victory.play()
+					victory.src = "audio/victory.mp3"
+					victory.play()
+					jsbj.play()
+					jsbj.src = "audio/jsbj.mp3"
+					jsbj.play()
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
@@ -434,8 +426,8 @@
 				.css("filter",'drop-shadow(0px 0px 0px white)')
 				setTimeout(function(){
 					$(".jieshu").css('display','none')
-					document.getElementById("victory").load()
-					document.getElementById("jsbj").load()
+					victory.load()
+					jsbj.load()
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(3,3)")
 						$("#jsi1").css("transform","rotateX(-90deg)")
@@ -443,20 +435,16 @@
 						$("#jsi3").css("left","100%")
 					},17)
 					$(".shouye").css("display","block")
-					document.addEventListener("WeixinJSBridgeReady", function () { 
-						document.getElementById("audio1").play()
-						document.getElementById("audio1").src = "audio/bj.mp3"
-						document.getElementById("audio1").play()
-					},false)
+					audio1.play()
+					audio1.src = "audio/bj.mp3"
+					audio1.play()
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
 						setTimeout(function(){
-							document.addEventListener("WeixinJSBridgeReady", function () { 
-								document.getElementById("zhen").play()
-								document.getElementById("zhen").src = "audio/zhen.mp3"
-								document.getElementById("zhen").play()
-							},false)
+							zhen.play()
+							zhen.src = "audio/zhen.mp3"
+							zhen.play()
 						},800)
 					},16)
 				},300)
