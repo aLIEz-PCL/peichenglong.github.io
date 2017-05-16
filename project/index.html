@@ -109,6 +109,7 @@
 		<audio class="zhen" src="audio/zhen.mp3"></audio>
 		<audio class="victory" src="audio/victory.mp3"></audio>
 		<audio class="jsbj" src="audio/jsbj.mp3"></audio>
+		<audio class="avchange" src=""></audio>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
@@ -272,8 +273,12 @@
 			var intro1 = ["img/字/1.png","img/字/2.png","img/字/3.png","img/字/4.png","img/字/5.png"]
 			var intro2 = ["img/字/6.png","img/字/7.png","img/字/8.png","img/字/9.png","img/字/10.png"]
 			
+			var av1 = ["audio.laofuzi.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3"]
+			var av2 = ["audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"]
+			
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
+			var avchange = $(".avchange")[0]
 			xqleft.addEventListener("touchstart",function(e){
 				$("#tishi").css("display","none")
 				$(".xqleft").css("opacity",'1')
@@ -289,6 +294,8 @@
 				$("#i3")[0].src = bj0[i][3]
 				$("#i4")[0].src = bj0[i][4]
 				$(".message img")[0].src = intro1[i]
+				avchange.src = av1[i]
+				avchange.play()
 			},false)
 			xqright.addEventListener("touchstart",function(e){
 				$("#tishi").css("display","none")
@@ -305,6 +312,8 @@
 				$("#i3")[0].src = bj1[i][3]
 				$("#i4")[0].src = bj1[i][4]
 				$(".message img")[0].src = intro2[i]
+				avchange.src = av2[i]
+				avchange.play()
 			},false)
 			
 			var up = $(".up")[0]
