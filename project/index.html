@@ -119,7 +119,9 @@
             zhezhao1 += "<div class='zhezhaobg' style='width:100%;height:100%; background-color:#000000;opacity:0.8;'><\/div>";
             zhezhao1 += "<div class='font' style='position:absolute;top:0;bottom:0;left:0;right:0; margin:auto; width:5rem;height:1rem; font-size:1rem; color:#ffcb99;'>LOADING...<\/div>"
             zhezhao1 +="</div>";
-            
+        
+        
+        var zz = $(".zhezhao1")[0]
         function changeFont(){
         	setTimeout(function(){
         		$(".font").text("LOADING")
@@ -198,7 +200,7 @@
 		        		$(".font").text("点击开始")
 			       }
 			    }
-				window.addEventListener("touchstart",function(){
+				zz.addEventListener("touchstart",function(){
 					setTimeout(function(){
 		        		$('.zhezhao1').remove();
 		         		$(".shouye").css("display","block")
