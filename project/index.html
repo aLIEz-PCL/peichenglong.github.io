@@ -183,22 +183,24 @@
 					        	imgobj = new Image();
 					        	imgobj.src=imgattr[i];
 					        }
-					        for(var i=0;i<avattr.length;i++){
-					        	avobj = new Audio();
-					        	avobj.src = avattr[i];
-					        }
+//					        for(var i=0;i<avattr.length;i++){
+//					        	avobj = new Audio();
+//					        	avobj.src = avattr[i];
+//					        }
 					        imgobj.onload = function(){
 //					        	m = true
 								setTimeout(function(){
 					        		clearInterval(c)
 					        		$('.zhezhao1').remove();
 					         		$(".shouye").css("display","block")
+					         		audio1.src = "audio/bj.mp3"
 					         		audio1.volume = 0.5
 					         		audio1.play()
 					         		setTimeout(function(){
 										$(".sycenter img").css("transform","scale(1,1)")
 										.css('transition-duration',"1s")
 										setTimeout(function(){
+											zhen.src = "audio/zhen.mp3"
 											zhen.play()
 										},800)
 									},17)
@@ -376,7 +378,9 @@
 					$(".jieshu").css("display","block")
 					.css("z-index",'200')
 					avchange.load()
+					victory.src = "audio/victory.mp3"
 					victory.play()
+					jsbj.src = "audio/jsbj.mp3"
 					jsbj.play()
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(1,1)")
@@ -418,11 +422,13 @@
 						$("#jsi3").css("left","100%")
 					},17)
 					$(".shouye").css("display","block")
+					audio1.src = "audio/bj.mp3"
 					audio1.play()
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
 						setTimeout(function(){
+							zhen.src = "audio/zhen.mp3"
 							zhen.play()
 						},800)
 					},16)
