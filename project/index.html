@@ -193,7 +193,8 @@
 //			        	avobj.src = avattr[i];
 //			        }
 			        imgobj.onload = function(){
-						setTimeout(function(){
+			        	$(".shouye").css("display","none")
+			        	setTimeout(function(){
 			        		clearInterval(c)
 			        		$('.zhezhao1').remove();
 			         		$(".shouye").css("display","block")
@@ -202,7 +203,7 @@
 					 		audio1.src = "audio/bj.mp3"
 					 		audio1.volume = 0.5
 					 		audio1.play()
-    							
+								
 			         		
 			         		setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
