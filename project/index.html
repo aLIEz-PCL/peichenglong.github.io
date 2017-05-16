@@ -147,13 +147,6 @@
 //          	xiangqing.addEventListener("touchstart",function(){
 //          		click.src = ''
 //          	})
-			var avattr = new Array()
-				avattr = [
-					"audio/bj.mp3","audio/begin.mp3","audio/victory.mp3",
-			    	"audio/click.mp3","audio/jsbj.mp3","audio/zhen.mp3",
-			    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
-			    	"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
-				]
 			var imgattr = new Array()
 			    $('body').append(zhezhao1);
 			    imgattr = [
@@ -183,12 +176,7 @@
 			        	imgobj = new Image();
 			        	imgobj.src=imgattr[i];
 			        }
-//					        for(var i=0;i<avattr.length;i++){
-//					        	avobj = new Audio();
-//					        	avobj.src = avattr[i];
-//					        }
 			        imgobj.onload = function(){
-//					        	m = true
 						setTimeout(function(){
 			        		clearInterval(c)
 			        		$('.zhezhao1').remove();
@@ -205,13 +193,7 @@
 								},800)
 							},17)
 			        	},17)
-			        }
-//					        avobj.onload = function(){
-//					        	n = true
-//					        }
-//					        if(m == true && n == true){
-//					        	
-//					        }
+			       }
 			    }
 		
 				
@@ -235,12 +217,12 @@
 				    }else{  
 				        //这里是竖屏下需要执行的事件
 				        if(document.documentElement.clientWidth < document.documentElement.clientHeight){
-//				        	window.addEventListener("touchstart",function(){
-//					        	$("main").css("display","flex")
-//					        })
-//				        	$("main").css("position","absolute")
-//					        $('main').css('z-index','300')
-//					        $("main").css("display","flex")
+				        	window.addEventListener("touchstart",function(){
+					        	$("main").css("display","flex")
+					        })
+				        	$("main").css("position","absolute")
+					        $('main').css('z-index','300')
+					        $("main").css("display","flex")
 				        }
 				    }  
 				}
