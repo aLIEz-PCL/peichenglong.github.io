@@ -247,7 +247,9 @@
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
-						audio1.load()
+						setTimeout(function(){
+							audio1.load()
+						},17)
 					},5000)
 				},300)
 			})
