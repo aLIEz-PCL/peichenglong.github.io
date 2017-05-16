@@ -55,7 +55,6 @@
 			<div class="xqcenter">
 				<div id="tishi">
 					<div id="dian"></div>
-					<h2>点击头像查看具体信息</h2>
 				</div>
 				<div id="focus" class="focus">
 					<div class="hd">
@@ -99,7 +98,9 @@
 				<img id="jsi2" src="img/底/images/底_11.png" alt="" />
 				<img id="jsi3" src="img/底/images/底_13.png" alt="" />
 			</div>
-			<div class="share"></div>
+			<div class="share">
+				<p>点击右上角分享</p>
+			</div>
 		</div>
 	</body>
 	<script src="libs/jquery-3.1.1.min.js"></script>
@@ -216,6 +217,9 @@
 				.css("filter",'drop-shadow(0px 0px 0px gold)')
 				setTimeout(function(){
 					$('.shouye').css("display","none")
+					setTimeout(function(){
+						$(".sycenter img").css("transform","scale(3,3)")
+					},16)
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
@@ -285,20 +289,26 @@
 			var up = $(".up")[0]
 			var message = $(".message")[0]
 			up.addEventListener("touchstart",function(){
-				$(".up").animate({
-					bottom:"-100%"
-				},300)
-				$(".message").animate({
-					bottom:"-2%"
-				},500)
+				up.addEventListener("touchend",function(){
+					$(".up").animate({
+						bottom:"-100%"
+					},300)
+					$(".message").animate({
+						bottom:"-2%"
+					},500)
+				})
+				
 			})
 			message.addEventListener("touchstart",function(){
-				$(".up").animate({
-					bottom:"0%"
-				},300)
-				$(".message").animate({
-					bottom:"-100%"
-				},500)
+				message.addEventListener("touchend",function(){
+					$(".up").animate({
+						bottom:"0%"
+					},500)
+					$(".message").animate({
+						bottom:"-100%"
+					},300)
+				})
+				
 			})
 			
 			 
@@ -345,7 +355,17 @@
 				.css("filter",'drop-shadow(0px 0px 0px white)')
 				setTimeout(function(){
 					$(".jieshu").css('display','none')
+					setTimeout(function(){
+						$(".jstop img").css("transform","scale(3,3)")
+						$("#jsi1").css("transform","rotateX(-90deg)")
+						$("#jsi2").css("left","-100%")
+						$("#jsi3").css("left","100%")
+					},17)
 					$(".shouye").css("display","block")
+					setTimeout(function(){
+						$(".sycenter img").css("transform","scale(1,1)")
+						.css('transition-duration',"1s")
+					},16)
 				},300)
 			})
 			share.addEventListener("touchstart",function(){

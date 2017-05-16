@@ -219,6 +219,10 @@ main div #two{
 	justify-content: center;
 	align-items: center;
 	color: white;
+	background-image: url(img/3/click.png);
+	background-size: 12% 8%;
+	background-repeat: no-repeat;
+	background-position: 15% 5%;
 }
 #tishi #dian{
 	position: absolute;
@@ -409,7 +413,16 @@ main div #two{
 	background-image: url(img/底/share.png);
 	background-size: 6% 10%;
 	background-repeat: no-repeat;
-	background-position: top right;
+	background-position: 94% 0%;
 	display: none;
 	z-index: 600;
+}
+.share p{
+	position: absolute;
+	width: 13%;
+	height: 17%;
+	top: 9%;
+	left: 87%;
+	color: white;
+	font-size: 0.5rem;
 }
