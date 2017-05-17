@@ -99,6 +99,9 @@
 				<p>点击右上角分享</p>
 			</div>
 		</div>
+		<input id="timestamp" type="hidden" value="${timestamp}" />
+	    <input id="noncestr" type="hidden" value="${nonceStr}" />
+	    <input id="signature" type="hidden" value="${signature}" />
 		<!--语音元素-->
 		<audio id="audio1" src="audio/bj.mp3" type="audio/mpeg" preload="load" loop="loop"></audio>
 		<audio id="audio2" src="audio/begin.mp3" type="audio/mpeg" preload="load"></audio>
@@ -107,7 +110,8 @@
 		<audio id="victory" src="audio/victory.mp3" type="audio/mpeg" preload="load"></audio>
 		<audio id="avchange" src="audio/click.mp3" type="audio/mpeg" preload="load"></audio>
 	</body>
-	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/power-slider.min.js"></script>		
 	<script>
@@ -508,10 +512,11 @@
 					handle:"fadeTo",//滚动方式
 					delayTime:"3000"//滚动间隔
 				});
-//			0ad6db2e2c326837f916ce420a9c9100
+//			65b96b75a2a84c8d3eef19e0a3a93f7d
 	            var timestamp = $("#timestamp").val();//时间戳
 	            var nonceStr = $("#noncestr").val();//随机串
 	            var signature = $("#signature").val();//签名
+	            
 	            wx.config({
 	                debug : false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 	                appId : 'wxb342807f5e302949', // 必填，公众号的唯一标识
