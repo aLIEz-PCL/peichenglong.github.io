@@ -128,21 +128,21 @@
 			var avchange = document.getElementById("avchange")
 
 
-//			function changeFont(){
-//	        	setTimeout(function(){
-//	        		$(".font").text("LOADING")
-//	        	},17)
-//	        	setTimeout(function(){
-//	        		$(".font").text("LOADING.")
-//	        	},300)
-//	        	setTimeout(function(){ 
-//	        		$(".font").text("LOADING..")
-//	        	},600)
-//	        	setTimeout(function(){
-//	        		$(".font").text("LOADING...")
-//	        	},900)
-//	        }
-//	        var c = setInterval(changeFont,1200)
+			function changeFont(){
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING")
+	        	},17)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING.")
+	        	},300)
+	        	setTimeout(function(){ 
+	        		$(".font").text("LOADING..")
+	        	},600)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING...")
+	        	},900)
+	        }
+	        var c = setInterval(changeFont,1200)
 			
 			
 			var imgattr = new Array()
@@ -179,35 +179,35 @@
 //			        }
 			        imgobj.onload = function(){
 			        	$(".shouye").css("display","none")
-//			        	clearInterval(c)
+			        	clearInterval(c)
 		        		$(".font").text("点击开始")
 		        		audio1.load()
 			       }
 			    }
 			    
 			    
-			    function autoPlayAudio() {
-			        wx.config({
-			            // 配置信息, 即使不正确也能使用 wx.ready
-			            debug: false,
-			            appId: '',
-			            timestamp: 1,
-			            nonceStr: '',
-			            signature: '',
-			            jsApiList: [] 
-			        });
-			        wx.ready(function() {
-			            audio1.play(); 
-			        });
-			};
+//			    function autoPlayAudio() {
+//			        wx.config({
+//			            // 配置信息, 即使不正确也能使用 wx.ready
+//			            debug: false,
+//			            appId: '',
+//			            timestamp: 1,
+//			            nonceStr: '',
+//			            signature: '',
+//			            jsApiList: [] 
+//			        });
+//			        wx.ready(function() {
+//			            audio1.play(); 
+//			        });
+//			};
 			// 解决ios音乐不自动播放的问题
-			autoPlayAudio();
+//			autoPlayAudio();
 			
 			    
-			    var zz = $(".zhezhao1")[0]
+			    var zz = $(".font")[0]
 				zz.addEventListener("touchstart",function(){
-					zz.addEventListener("touchend",function(){
-						$('.zhezhao1').remove();
+					setTimeout(function(){
+		        		$('.zhezhao1').remove();
 		         		$(".shouye").css("display","block")
 		         		document.getElementById("audio1").play()
 		         		document.getElementById("audio1").pause()
@@ -225,7 +225,7 @@
 								zhen.play()
 							},800)
 						},17)
-					})
+		        	},17)
 				})
 				
 				
