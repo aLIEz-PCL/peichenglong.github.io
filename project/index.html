@@ -130,6 +130,14 @@
 
 			
 			function changeFont(){
+				function musicPlay1(){
+        			audio1.play()
+					audio1.src = "audio/bj.mp3"
+					audio1.volume = 0.3
+					audio1.addEventListener("canplay",function(){
+						audio1.play()
+					})
+        		}
 	        	setTimeout(function(){
 	        		$(".font").text("LOADING")
 	        	},17)
@@ -236,14 +244,6 @@
 			        		$('.zhezhao1').remove();
 			        		$(".shouye").css("display","block")
 			        		musicPlay1()
-			        		function musicPlay1(){
-			        			audio1.play()
-								audio1.src = "audio/bj.mp3"
-								audio1.volume = 0.3
-								audio1.addEventListener("canplay",function(){
-									audio1.play()
-								})
-			        		}
 							setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
 								.css('transition-duration',"1s")
