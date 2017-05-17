@@ -275,6 +275,7 @@
 				orientInit();
 			window.addEventListener('onorientationchange' in window?'orientationchange':'resize', function(){  
 		    	setTimeout(orientInit, 100);  
+		    	$("main").css("display","none")
 			},false)
 			
 			
@@ -331,6 +332,21 @@
 			var xqleft = $(".xqleft")[0]
 			var xqright = $(".xqright")[0]
 			var avchange = document.getElementById("avchange")
+			$("#i0")[0].addEventListener("touchstart",function(){
+				return
+			})
+			$("#i1")[0].addEventListener("touchstart",function(){
+				return
+			})
+			$("#i2")[0].addEventListener("touchstart",function(){
+				return
+			})
+			$("#i3")[0].addEventListener("touchstart",function(){
+				return
+			})
+			$("#i4")[0].addEventListener("touchstart",function(){
+				return
+			})
 			xqleft.addEventListener("touchstart",function(e){
 				$("#tishi").css("display","none")
 				$(".xqleft").css("opacity",'1')
