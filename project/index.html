@@ -128,7 +128,7 @@
 			var avchange = document.getElementById("avchange")
 			var click = document.getElementById("click")
 
-
+			
 			function changeFont(){
 	        	setTimeout(function(){
 	        		$(".font").text("LOADING")
@@ -142,8 +142,23 @@
 	        	setTimeout(function(){
 	        		$(".font").text("LOADING...")
 	        	},900)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING")
+	        	},1200)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING.")
+	        	},1500)
+	        	setTimeout(function(){ 
+	        		$(".font").text("LOADING..")
+	        	},1800)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING...")
+	        	},2100)
+	        	setTimeout(function(){
+	        		$(".font").text("点击开始")
+	        	},2200)
 	        }
-	        var c = setInterval(changeFont,1200)
+			changeFont()
 			
 			
 			var imgattr = new Array()
@@ -179,9 +194,8 @@
 //			        	avobj.src = avattr[i];
 //			        }
 			        imgobj.onload = function(){
+			        	$(".font").text("点击开始")
 			        	$(".shouye").css("display","none")
-			        	clearInterval(c)
-		        		$(".font").text("点击开始")
 		        		audio1.load()
 		        		click.play()
 			       }
@@ -212,7 +226,6 @@
 						setTimeout(function(){
 			        		$('.zhezhao1').remove();
 			        		
-			        		
 			        		$(".shouye").css("display","block")
 							audio1.play()
 							audio1.src = "audio/bj.mp3"
@@ -224,7 +237,6 @@
 			        	},300)
 					})
 				})
-				
 				
 				
 				
