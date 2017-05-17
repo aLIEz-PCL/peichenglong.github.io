@@ -354,7 +354,7 @@
 				$("#i3")[0].src = bj0[i][3]
 				$("#i4")[0].src = bj0[i][4]
 				$(".message img")[0].src = intro1[i]
-				avchange.play()
+				avchange.load()
 				avchange.src = av1[i]
 				avchange.play()
 			},false)
@@ -459,10 +459,15 @@
 						$("#jsi3").css("left","100%")
 					},17)
 					$(".shouye").css("display","block")
-					audio1.play()
-					audio1.src = "audio/bj.mp3"
-					audio1.volume = 0.3
-					audio1.play()
+					musicPlay1()
+	        		function musicPlay1(){
+	        			audio1.play()
+						audio1.src = "audio/bj.mp3"
+						audio1.volume = 0.3
+						audio1.addEventListener("canplay",function(){
+							audio1.play()
+						})
+	        		}
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
@@ -487,8 +492,8 @@
 				slideCell:"#focus",
 				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
 				mainCell:".bd ul", 
-				effect:"left", //不循环轮播
-//				effect:"leftLoop", //循环轮播
+//				effect:"left", //不循环轮播
+				effect:"leftLoop", //循环轮播
 				autoPlay:true,//自动播放
 				autoPage:true, //自动分页
 				switchLoad:"_src"//切换加载，真实图片路径为"_src"
