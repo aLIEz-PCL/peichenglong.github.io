@@ -103,12 +103,11 @@
 			</div>
 		</div>
 		<!--语音元素-->
-		<audio id="audio1" src="audio/jsbj.mp3" type="audio/mpeg" preload="load" loop="loop"></audio>
+		<audio id="audio1" src="audio/bj.mp3" type="audio/mpeg" preload="load" loop="loop"></audio>
 		<audio id="audio2" src="audio/begin.mp3" type="audio/mpeg" preload="load"></audio>
 <!--		<audio class="click" src="audio/click.mp3" type="audio/mpeg"></audio>-->
 		<audio id="zhen" src="audio/zhen.mp3" type="audio/mpeg" preload="load"></audio>
 		<audio id="victory" src="audio/victory.mp3" type="audio/mpeg" preload="load"></audio>
-		<audio id="jsbj" src="audio/jsbj.mp3" type="audio/mpeg" preload="load"></audio>
 		<audio id="avchange" src="audio/click.mp3" type="audio/mpeg" preload="load"></audio>
 	</body>
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -141,7 +140,6 @@
 			var audio2 = document.getElementById("audio2")
 			var zhen = document.getElementById("zhen")
 			var victory = document.getElementById("victory")
-			var jsbj = document.getElementById("jsbj")
 			var avchange = document.getElementById("avchange")
 //              var click = $(".click")[0]
 //          	window.addEventListener("touchstart",function(){
@@ -226,7 +224,7 @@
 		        		$('.zhezhao1').remove();
 		         		$(".shouye").css("display","block")
 			            audio1.play()
-				 		audio1.src = "audio/jsbj.mp3"
+				 		audio1.src = "audio/bj.mp3"
 				 		audio1.volume = 0.5
 				 		audio1.play()
 							
@@ -395,7 +393,6 @@
 			})
 			
 			var victory = document.getElementById("victory")
-			var jsbj = document.getElementById("jsbj")
 			var stop = $("#stop")[0]
 			stop.addEventListener("touchstart",function(){
 				$("#stop").css("transform","translateY(1px)")
@@ -444,7 +441,6 @@
 				setTimeout(function(){
 					$(".jieshu").css('display','none')
 					victory.load()
-					jsbj.load()
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(3,3)")
 						$("#jsi1").css("transform","rotateX(-90deg)")
