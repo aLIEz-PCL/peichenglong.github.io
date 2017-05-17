@@ -128,21 +128,21 @@
 			var avchange = document.getElementById("avchange")
 
 
-			function changeFont(){
-	        	setTimeout(function(){
-	        		$(".font").text("LOADING")
-	        	},17)
-	        	setTimeout(function(){
-	        		$(".font").text("LOADING.")
-	        	},300)
-	        	setTimeout(function(){ 
-	        		$(".font").text("LOADING..")
-	        	},600)
-	        	setTimeout(function(){
-	        		$(".font").text("LOADING...")
-	        	},900)
-	        }
-	        var c = setInterval(changeFont,1200)
+//			function changeFont(){
+//	        	setTimeout(function(){
+//	        		$(".font").text("LOADING")
+//	        	},17)
+//	        	setTimeout(function(){
+//	        		$(".font").text("LOADING.")
+//	        	},300)
+//	        	setTimeout(function(){ 
+//	        		$(".font").text("LOADING..")
+//	        	},600)
+//	        	setTimeout(function(){
+//	        		$(".font").text("LOADING...")
+//	        	},900)
+//	        }
+//	        var c = setInterval(changeFont,1200)
 			
 			
 			var imgattr = new Array()
@@ -179,7 +179,7 @@
 //			        }
 			        imgobj.onload = function(){
 			        	$(".shouye").css("display","none")
-			        	clearInterval(c)
+//			        	clearInterval(c)
 		        		$(".font").text("点击开始")
 		        		audio1.load()
 			       }
