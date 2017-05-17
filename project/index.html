@@ -206,26 +206,24 @@
 			    
 			    var zz = $(".zhezhao1")[0]
 				zz.addEventListener("touchstart",function(){
-					setTimeout(function(){
-		        		$('.zhezhao1').remove();
-		         		$(".shouye").css("display","block")
-		         		document.getElementById("audio1").play()
-		         		document.getElementById("audio1").pause()
-			            audio1.play()
-				 		audio1.src = "audio/bj.mp3"
-				 		audio1.volume = 0.5
-				 		audio1.play()
-							
-		         		setTimeout(function(){
-							$(".sycenter img").css("transform","scale(1,1)")
-							.css('transition-duration',"1s") 
-							setTimeout(function(){
-								zhen.play()
-								zhen.src = "audio/zhen.mp3"
-								zhen.play()
-							},800)
-						},17)
-		        	},17)
+	        		$('.zhezhao1').remove();
+	         		$(".shouye").css("display","block")
+	         		document.getElementById("audio1").play()
+	         		document.getElementById("audio1").pause()
+		            audio1.play()
+			 		audio1.src = "audio/bj.mp3"
+			 		audio1.volume = 0.5
+			 		audio1.play()
+						
+	         		setTimeout(function(){
+						$(".sycenter img").css("transform","scale(1,1)")
+						.css('transition-duration',"1s") 
+						setTimeout(function(){
+							zhen.play()
+							zhen.src = "audio/zhen.mp3"
+							zhen.play()
+						},800)
+					},17)
 				})
 				
 				
