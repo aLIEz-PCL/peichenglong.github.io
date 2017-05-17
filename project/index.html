@@ -232,15 +232,10 @@
 						setTimeout(function(){
 			        		$('.zhezhao1').remove();
 			        		$(".shouye").css("display","block")
-			        		musicPlay1()
-			        		function musicPlay1(){
 			        			audio1.play()
 								audio1.src = "audio/bj.mp3"
 								audio1.volume = 0.3
-								audio1.addEventListener("canplay",function(){
-									audio1.play()
-								})
-			        		}
+								audio1.play()
 							setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
 								.css('transition-duration',"1s")
@@ -456,15 +451,10 @@
 						$("#jsi3").css("left","100%")
 					},17)
 					$(".shouye").css("display","block")
-					musicPlay1()
-	        		function musicPlay1(){
 	        			audio1.play()
 						audio1.src = "audio/bj.mp3"
 						audio1.volume = 0.3
-						audio1.addEventListener("canplay",function(){
-							audio1.play()
-						})
-	        		}
+						audio1.play()
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
@@ -500,7 +490,7 @@
 				
 			$("#slider").powerSlider({
 					handle:"fadeTo",//滚动方式
-					delayTime:"2000"//滚动间隔
+					delayTime:"3000"//滚动间隔
 				});
 				
 				
