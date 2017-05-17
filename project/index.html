@@ -105,7 +105,7 @@
 		<!--语音元素-->
 		<audio id="audio1" src="audio/bj.mp3" type="audio/mpeg" preload="load" loop="loop"></audio>
 		<audio id="audio2" src="audio/begin.mp3" type="audio/mpeg" preload="load"></audio>
-<!--		<audio class="click" src="audio/click.mp3" type="audio/mpeg"></audio>-->
+		<audio id="click" src="audio/click.mp3" type="audio/mpeg"></audio>
 		<audio id="zhen" src="audio/zhen.mp3" type="audio/mpeg" preload="load"></audio>
 		<audio id="victory" src="audio/victory.mp3" type="audio/mpeg" preload="load"></audio>
 		<audio id="avchange" src="audio/click.mp3" type="audio/mpeg" preload="load"></audio>
@@ -126,6 +126,7 @@
 			var zhen = document.getElementById("zhen")
 			var victory = document.getElementById("victory")
 			var avchange = document.getElementById("avchange")
+			var click = document.getElementById("click")
 
 
 			function changeFont(){
@@ -182,6 +183,7 @@
 			        	clearInterval(c)
 		        		$(".font").text("点击开始")
 		        		audio1.load()
+		        		click.play()
 			       }
 			    }
 			    
@@ -208,17 +210,15 @@
 				zz.addEventListener("touchstart",function(){
 					setTimeout(function(){
 		        		$('.zhezhao1').remove();
-		         		$(".shouye").css("display","block")
-		         		document.getElementById("audio1").play()
-		         		document.getElementById("audio1").pause()
-			            audio1.play()
-				 		audio1.src = "audio/bj.mp3"
-				 		audio1.volume = 0.5
-				 		audio1.play()
-							
-		         		setTimeout(function(){
+		        		
+		        		
+		        		$(".shouye").css("display","block")
+						audio1.play()
+						audio1.src = "audio/bj.mp3"
+						audio1.play()
+						setTimeout(function(){
 							$(".sycenter img").css("transform","scale(1,1)")
-							.css('transition-duration',"1s") 
+							.css('transition-duration',"1s")
 							setTimeout(function(){
 								zhen.play()
 								zhen.src = "audio/zhen.mp3"
