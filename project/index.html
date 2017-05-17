@@ -56,20 +56,17 @@
 				<div id="tishi">
 					<div id="dian"></div>
 				</div>
-				<div id="focus" class="focus">
-					<div class="hd">
-						<ul></ul>
-					</div>
-					<div class="bd">
-						<ul>
-							<li id="a0"><a href="#"><img id="i0" _src="" src="img/图/blank.png" /></a></li>
-							<li id="a1"><a href="#"><img id="i1" _src="" src="img/图/blank.png"/></a></li>
-							<li id="a2"><a href="#"><img id="i2" _src="" src="img/图/blank.png"/></a></li>
-							<li id="a3"><a href="#"><img id="i3" _src="" src="img/图/blank.png"/></a></li>
-							<li id="a4"><a href="#"><img id="i4" _src="" src="img/图/blank.png"/></a></li>
-						</ul>
-					</div>
+			<!-----轮播图-->	
+				<div class="slider" id="slider">
+					<ul class="sliderbox">
+						<li id="a0"><a href="#"><img id="i0" src=""/></a></li>
+						<li id="a1"><a href="#"><img id="i1" src=""/></a></li>
+						<li id="a2"><a href="#"><img id="i2" src=""/></a></li>
+						<li id="a3"><a href="#"><img id="i3" src=""/></a></li>
+						<li id="a4"><a href="#"><img id="i4" src=""/></a></li>
+					</ul>
 				</div>
+				
 				<div class="up">
 					<img src="img/3/3_25.png"/>
 				</div>
@@ -113,6 +110,7 @@
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script src="libs/jquery-3.1.1.min.js"></script>
 	<script src="libs/TouchSlide.1.1.js"></script>
+	<script src="libs/power-slider.min.js"></script>		
 	<script>
 		var zhezhao1 = "<div class='zhezhao1' style='width:100%;height:100%; position:fixed; top: 0; left: 0; z-index:2999;'>";
             zhezhao1 += "<div class='zhezhaobg' style='width:100%;height:100%; background-color:#000000;opacity:0.8;'><\/div>";
@@ -373,7 +371,7 @@
 				$("#i3")[0].src = bj1[i][3]
 				$("#i4")[0].src = bj1[i][4]
 				$(".message img")[0].src = intro2[i]
-				avchange.play()
+				avchange.load()
 				avchange.src = av2[i]
 				avchange.play()
 			},false)
@@ -487,21 +485,25 @@
 				$(".share").css("display",'none')
 			})
 			
-			var slider = new TouchSlide()
-			TouchSlide({ 
-				slideCell:"#focus",
-				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-				mainCell:".bd ul", 
-//				effect:"left", //不循环轮播
-				effect:"leftLoop", //循环轮播
-				autoPlay:true,//自动播放
-				autoPage:true, //自动分页
-				switchLoad:"_src"//切换加载，真实图片路径为"_src"
-			});
+//			var slider = new TouchSlide()
+//			TouchSlide({ 
+//				slideCell:"#focus",
+//				titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+//				mainCell:".bd ul", 
+////				effect:"left", //不循环轮播
+//				effect:"leftLoop", //循环轮播
+//				autoPlay:true,//自动播放
+//				autoPage:true, //自动分页
+//				switchLoad:"_src"//切换加载，真实图片路径为"_src"
+//			});
 				
 			
 				
-				
+			$("#slider").powerSlider({
+					handle:"fadeTo",//滚动方式
+					delayTime:"2000"//滚动间隔
+					
+				});
 				
 				
 				
