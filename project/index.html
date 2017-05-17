@@ -103,7 +103,7 @@
 			</div>
 		</div>
 		<!--语音元素-->
-		<audio id="audio1" src="audio/jsbj.mp3" type="audio/mpeg" preload="load"></audio>
+		<audio id="audio1" src="audio/jsbj.mp3" type="audio/mpeg" preload="load" loop="loop"></audio>
 		<audio id="audio2" src="audio/begin.mp3" type="audio/mpeg" preload="load"></audio>
 <!--		<audio class="click" src="audio/click.mp3" type="audio/mpeg"></audio>-->
 		<audio id="zhen" src="audio/zhen.mp3" type="audio/mpeg" preload="load"></audio>
@@ -117,7 +117,7 @@
 	<script>
 		var zhezhao1 = "<div class='zhezhao1' style='width:100%;height:100%; position:fixed; top: 0; left: 0; z-index:2999;'>";
             zhezhao1 += "<div class='zhezhaobg' style='width:100%;height:100%; background-color:#000000;opacity:0.8;'><\/div>";
-            zhezhao1 += "<div class='font' style='position:absolute;top:0;bottom:0;left:0;right:0; margin:auto; width:5rem;height:1rem; font-size:1rem; color:#ffcb99;'>LOADING...<\/div>"
+            zhezhao1 += "<div class='font' style='position:absolute;top:0;bottom:0;left:0;right:0; margin:auto; width:5rem;height:1rem; font-size:1rem; color:#ffcb99;'><\/div>"
             zhezhao1 +="</div>";
         
         
@@ -301,9 +301,6 @@
 					$(".vs").css("display",'block')
 					setTimeout(function(){
 						$(".vs").css("display",'none')
-						setTimeout(function(){
-							audio1.load()
-						},17)
 					},5000)
 				},300)
 			})
@@ -414,9 +411,6 @@
 					victory.play()
 					victory.src = "audio/victory.mp3"
 					victory.play()
-					jsbj.play()
-					jsbj.src = "audio/jsbj.mp3"
-					jsbj.play()
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
