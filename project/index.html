@@ -153,11 +153,9 @@
 	        	setTimeout(function(){
 	        		$(".font").text("LOADING...")
 	        	},2800)
-	        	setTimeout(function(){
-	        		$(".font").text("点击开始")
-	        	},3000)
 	        }
-			changeFont()
+			var c = setInterval(changeFont,2800)
+			
 			
 //			var avattr = new Array()
 //				avattr = [
@@ -172,6 +170,8 @@
 //			        	avobj.src = avattr[i];
 //			        }
 //			    }
+			    
+			    
 			    
 			var imgattr = new Array()
 			    $('body').append(zhezhao1);
@@ -204,7 +204,10 @@
 //			        	avobj.src = avattr[i];
 //			        }
 			        imgobj.onload = function(){
-			        	$(".font").text("点击开始")
+			        	clearInterval(c)
+			        	setTimeout(function(){
+			        		$(".font").text("点击开始")
+			        	},300)
 		        		audio1.load()
 		        		click.play()
 			       }
