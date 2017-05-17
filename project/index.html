@@ -239,9 +239,7 @@
 							audio1.play()
 							audio1.src = "audio/bj.mp3"
 							audio1.volume = 0.3
-							audio1.addEventListener("canplay",function(){
-								audio1.play()
-							})
+							audio1.play()
 							setTimeout(function(){
 								$(".sycenter img").css("transform","scale(1,1)")
 								.css('transition-duration',"1s")
@@ -293,10 +291,7 @@
 				$(".xiangqing").css("opacity",'1')
 				audio2.play()
 				audio2.src = "audio/begin.mp3"
-				audio2.addEventListener("canplay",function(){
-					audio2.play()
-				})
-				
+				audio2.play()
 			})
 			begin.addEventListener("touchend",function(){
 				$(".sybottom #img2").css("transform","translateY(-1px)")
@@ -357,9 +352,7 @@
 				$(".message img")[0].src = intro1[i]
 				avchange.play()
 				avchange.src = av1[i]
-				avchange.addEventListener("canplay",function(){
-					avchange.play()
-				})
+				avchange.play()
 			},false)
 			xqright.addEventListener("touchstart",function(e){
 				$("#tishi").css("display","none")
@@ -378,9 +371,7 @@
 				$(".message img")[0].src = intro2[i]
 				avchange.play()
 				avchange.src = av2[i]
-				avchange.addEventListener("canplay",function(){
-					avchange.play()
-				})
+				avchange.play()
 			},false)
 			
 			var up = $(".up")[0]
@@ -423,9 +414,7 @@
 					avchange.load()
 					victory.play()
 					victory.src = "audio/victory.mp3"
-					victory.addEventListener("canplay",function(){
-						victory.play()
-					})
+					victory.play()
 					setTimeout(function(){
 						$(".jstop img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
@@ -469,18 +458,14 @@
 					audio1.play()
 					audio1.src = "audio/bj.mp3"
 					audio1.volume = 0.3
-					audio1.addEventListener("canplay",function(){
-						audio1.play()
-					})
+					audio1.play()
 					setTimeout(function(){
 						$(".sycenter img").css("transform","scale(1,1)")
 						.css('transition-duration',"1s")
 						setTimeout(function(){
 							zhen.play()
 							zhen.src = "audio/zhen.mp3"
-							zhen.addEventListener("canplay",function(){
-								zhen.play()
-							})
+							zhen.play()
 						},800)
 					},16)
 				},300)
