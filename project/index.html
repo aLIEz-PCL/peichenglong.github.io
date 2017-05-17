@@ -120,44 +120,33 @@
             zhezhao1 +="</div>";
         
         
-        function changeFont(){
-        	setTimeout(function(){
-        		$(".font").text("LOADING")
-        	},16)
-        	setTimeout(function(){
-        		$(".font").text("LOADING.")
-        	},300)
-        	setTimeout(function(){ 
-        		$(".font").text("LOADING..")
-        	},600)
-        	setTimeout(function(){
-        		$(".font").text("LOADING...")
-        	},900)
-        }
-        var c = setInterval(changeFont,1200)
 		window.onload = function(){
 			var audio1 = document.getElementById("audio1")
 			var audio2 = document.getElementById("audio2")
 			var zhen = document.getElementById("zhen")
 			var victory = document.getElementById("victory")
 			var avchange = document.getElementById("avchange")
-//              var click = $(".click")[0]
-//          	window.addEventListener("touchstart",function(){
-//          		click.src = "audio/click.mp3"
-//          		click.volume = 0.3
-//          		click.play()
-//          	})
-//          	var xiangqing = $(".xiangqing")[0]
-//          	xiangqing.addEventListener("touchstart",function(){
-//          		click.src = ''
-//          	})
+
+
+			function changeFont(){
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING")
+	        	},16)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING.")
+	        	},300)
+	        	setTimeout(function(){ 
+	        		$(".font").text("LOADING..")
+	        	},600)
+	        	setTimeout(function(){
+	        		$(".font").text("LOADING...")
+	        	},900)
+	        }
+	        var c = setInterval(changeFont,1200)
+			
+			
 			var imgattr = new Array()
-//			var avattr = new Array()
 			    $('body').append(zhezhao1);
-//			    avattr = [ 
-//			    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
-//					"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3"
-//			    ] 
 			    imgattr = [
 			    	"audio/jiangziya.mp3","audio/laofuzi.mp3","audio/yuji.mp3","audio/diaochan.mp3","audio/liuchan.mp3",
 					"audio/luna.mp3","audio/damo.mp3","audio/lubanqihao.mp3","audio/wangzhaojun.mp3","audio/daji.mp3",
@@ -179,9 +168,6 @@
 			    ];
 			    //这里用了一个递归函数
 			    lodingpo();
-			    var audio1 = document.getElementById("audio1")
-			    var m = false
-			    var n = false
 			    function lodingpo(){
 			        for(var i=0;i<imgattr.length;i++){
 			        	imgobj = new Image();
